@@ -8,133 +8,218 @@
     <title>Ziyana Lifesciences</title>
 
     <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-body {
-    font-family: Arial, sans-serif;
-    background: #f5f9fc;
-    color: #1f2937;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header {
-    background: #ffffff;
-    padding: 22px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #e5e7eb;
-}
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f9fc;
+            color: #1f2937;
+        }
 
-header h1 {
-    color: #087ea4;
-    font-size: 28px;
-}
+        /* HEADER */
 
-nav a {
-    color: #334155;
-    text-decoration: none;
-    margin-left: 25px;
-}
+        header {
+            background: #ffffff;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
 
-nav a:hover {
-    color: #087ea4;
-}
+        header h1 {
+            color: #087ea4;
+            font-size: 28px;
+        }
 
-.hero {
-    text-align: center;
-    padding: 90px 20px;
-    background: #e8f6fb;
-}
+        nav a {
+            color: #334155;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
 
-.hero h2 {
-    font-size: 45px;
-    color: #087ea4;
-    margin-bottom: 15px;
-}
+        nav a:hover {
+            color: #087ea4;
+        }
 
-.hero p {
-    font-size: 19px;
-    color: #475569;
-}
+        /* HERO */
 
-.divisions {
-    padding: 70px 8%;
-    text-align: center;
-}
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: #e8f6fb;
+        }
 
-.divisions h2 {
-    font-size: 32px;
-    color: #087ea4;
-    margin-bottom: 40px;
-}
+        .hero h2 {
+            font-size: 48px;
+            color: #087ea4;
+            margin-bottom: 18px;
+        }
 
-<div class="cards">
+        .hero p {
+            font-size: 20px;
+            color: #475569;
+        }
 
-    <div class="card">
-        <h3>GP Range</h3>
-        <p>Regular Division</p>
-        <a href="gp.html">View Division</a>
-    </div>
+        /* DIVISIONS */
 
-    <div class="card">
-        <h3>Ortho Range</h3>
-        <p>Study Division</p>
-        <a href="ortho.html">View Division</a>
-    </div>
+        .divisions {
+            padding: 80px 8%;
+            text-align: center;
+        }
 
-    <div class="card">
-        <h3>Gyn Range</h3>
-        <p>Baby Division</p>
-        <a href="gyn.html">View Division</a>
-    </div>
+        .divisions h2 {
+            font-size: 34px;
+            color: #087ea4;
+            margin-bottom: 45px;
+        }
 
-</div>
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
 
-.about {
-    background: #ffffff;
-    padding: 70px 10%;
-    text-align: center;
-}
+        .card {
+            width: 300px;
+            padding: 40px 25px;
+            background: #ffffff;
+            border-radius: 14px;
+            border: 1px solid #dbeafe;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
 
-.about h2,
-.contact h2 {
-    color: #087ea4;
-    margin-bottom: 20px;
-}
+        .card h3 {
+            color: #087ea4;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
 
-.about p {
-    max-width: 800px;
-    margin: auto;
-    line-height: 1.8;
-    color: #64748b;
-}
+        .card p {
+            color: #64748b;
+            font-size: 17px;
+            margin-bottom: 25px;
+        }
 
-.contact {
-    padding: 70px 20px;
-    text-align: center;
-}
+        .card a {
+            display: inline-block;
+            padding: 11px 22px;
+            background: #087ea4;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
 
-.contact p {
-    margin: 8px;
-    color: #64748b;
-}
+        .card a:hover {
+            background: #075f7b;
+        }
 
-footer {
-    background: #087ea4;
-    color: white;
-    text-align: center;
-    padding: 22px;
-}
-</style>
+        /* ABOUT */
+
+        .about {
+            background: #ffffff;
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .about h2 {
+            color: #087ea4;
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        .experience {
+            font-size: 30px;
+            font-weight: bold;
+            color: #087ea4;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            max-width: 850px;
+            margin: auto;
+            line-height: 1.8;
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            color: #087ea4;
+            font-size: 34px;
+            margin-bottom: 25px;
+        }
+
+        .contact p {
+            margin: 10px;
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #087ea4;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            .hero h2 {
+                font-size: 34px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 350px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
+    <!-- HEADER -->
+
     <header>
+
         <h1>Ziyana Lifesciences</h1>
 
         <nav>
@@ -143,57 +228,79 @@ footer {
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
         </nav>
+
     </header>
 
 
+    <!-- HOME -->
+
     <section class="hero" id="home">
+
         <h2>Ziyana Lifesciences</h2>
-        <p>Committed to Healthcare and Better Living</p>
+
+        <p>
+            Committed to Healthcare and Better Living
+        </p>
+
     </section>
 
-<div class="cards">
 
-    <div class="card">
-        <h3>GP Range</h3>
-        <p>Regular Division</p>
-        <a href="gp.html">View Division</a>
-    </div>
+    <!-- DIVISIONS -->
 
-    <div class="card">
-        <h3>Ortho Range</h3>
-        <p>Study Division</p>
-        <a href="ortho.html">View Division</a>
-    </div>
+    <section class="divisions" id="divisions">
 
-    <div class="card">
-        <h3>Gyn Range</h3>
-        <p>Baby Division</p>
-        <a href="gyn.html">View Division</a>
-    </div>
+        <h2>Our Divisions</h2>
 
-</div>
-    
         <div class="cards">
 
+            <!-- GP -->
+
             <div class="card">
+
                 <h3>GP Range</h3>
+
                 <p>
                     Regular Division
                 </p>
+
+                <a href="gp.html">
+                    View Division
+                </a>
+
             </div>
 
+
+            <!-- ORTHO -->
+
             <div class="card">
+
                 <h3>Ortho Range</h3>
+
                 <p>
                     Study Division
                 </p>
+
+                <a href="ortho.html">
+                    View Division
+                </a>
+
             </div>
 
+
+            <!-- GYN -->
+
             <div class="card">
+
                 <h3>Gyn Range</h3>
+
                 <p>
                     Baby Division
                 </p>
+
+                <a href="gyn.html">
+                    View Division
+                </a>
+
             </div>
 
         </div>
@@ -201,34 +308,54 @@ footer {
     </section>
 
 
+    <!-- ABOUT -->
+
     <section class="about" id="about">
 
         <h2>About Ziyana Lifesciences</h2>
 
-         <p>
-    With 25+ years of experience in the healthcare industry,
-    Ziyana Lifesciences is committed to providing quality
-    healthcare solutions through our specialized divisions.
-    Our focus is on supporting better healthcare and improving
-    people's quality of life.
- 
+        <div class="experience">
+            25+ Years of Experience
+        </div>
+
+        <p>
+            With more than 25 years of experience in the healthcare
+            industry, Ziyana Lifesciences is committed to providing
+            quality healthcare solutions through our specialized
+            divisions.
+
+            Our focus is on supporting better healthcare and
+            improving people's quality of life.
         </p>
 
     </section>
 
 
+    <!-- CONTACT -->
+
     <section class="contact" id="contact">
 
         <h2>Contact Us</h2>
 
-        <p>Email: info@ziyanalifesciences.com</p>
-        <p>Phone: +91 XXXXX XXXXX</p>
+        <p>
+            Email: info@ziyanalifesciences.com
+        </p>
+
+        <p>
+            Phone: +91 XXXXX XXXXX
+        </p>
 
     </section>
 
 
+    <!-- FOOTER -->
+
     <footer>
-        <p>© 2001 Ziyana Lifesciences. All Rights Reserved.</p>
+
+        <p>
+            © 2026 Ziyana Lifesciences. All Rights Reserved.
+        </p>
+
     </footer>
 
 </body>
