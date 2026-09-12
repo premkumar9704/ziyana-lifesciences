@@ -1,1731 +1,614 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Ziyana Lifesciences Private Limited</title>
-
-    <meta name="description"
-          content="Ziyana Lifesciences Private Limited - Pharmaceutical and Healthcare Products">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 90px;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4f9fb;
-            color: #17324d;
-            line-height: 1.6;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* =========================
-           TOP BAR
-        ========================= */
-
-        .top-bar {
-            background: #09283a;
-            color: #dceff2;
-            padding: 9px 20px;
-            font-size: 13px;
-        }
-
-        .top-bar-inner {
-            max-width: 1280px;
-            margin: auto;
-            display: flex;
-            justify-content: space-between;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.97);
-            border-bottom: 1px solid #dce8ef;
-            backdrop-filter: blur(10px);
-        }
-
-        .nav {
-            max-width: 1280px;
-            min-height: 82px;
-            margin: auto;
-            padding: 10px 20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 25px;
-        }
-
-        /* LOGO */
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 250px;
-        }
-
-        .brand-logo {
-            width: 58px;
-            height: 58px;
-            object-fit: contain;
-            display: block;
-        }
-
-        .brand-text {
-            color: #087f79;
-            font-size: 21px;
-            font-weight: 800;
-        }
-
-        .brand-text small {
-            display: block;
-            color: #60788b;
-            font-size: 10px;
-            letter-spacing: 1.5px;
-            margin-top: 2px;
-        }
-
-        /* NAVIGATION */
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            flex-wrap: wrap;
-        }
-
-        .nav-links a {
-            padding: 9px 12px;
-            border-radius: 9px;
-            font-size: 14px;
-            font-weight: 700;
-        }
-
-        .nav-links a:hover {
-            background: #eaf8f7;
-            color: #087f79;
-        }
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            padding: 90px 20px 110px;
-
-            background:
-                radial-gradient(
-                    circle at 85% 15%,
-                    rgba(25, 184, 170, 0.18),
-                    transparent 28%
-                ),
-                linear-gradient(
-                    135deg,
-                    #effcfb,
-                    #f5f8ff 60%,
-                    #ffffff
-                );
-        }
-
-        .hero-inner {
-            max-width: 1280px;
-            margin: auto;
-
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 8px 14px;
-            border: 1px solid #bfe7e3;
-            border-radius: 50px;
-            background: white;
-            color: #087f79;
-            font-size: 13px;
-            font-weight: 800;
-        }
-
-        h1 {
-            margin: 20px 0;
-            font-size: clamp(44px, 6vw, 76px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-            color: #0d344c;
-        }
-
-        h1 span {
-            color: #087f79;
-        }
-
-        .hero-text {
-            max-width: 700px;
-            margin-bottom: 28px;
-            color: #60788b;
-            font-size: 19px;
-        }
-
-        .buttons {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 13px 20px;
-            border-radius: 10px;
-            font-weight: 800;
-            border: 1px solid #dce8ef;
-        }
-
-        .button-primary {
-            background: linear-gradient(
-                135deg,
-                #087f79,
-                #0a9d94
-            );
-            color: white;
-            border: none;
-        }
-
-        /* HERO VISUAL */
-
-        .hero-visual {
-            min-height: 360px;
-            display: grid;
-            place-items: center;
-        }
-
-        .hero-circle {
-            width: min(390px, 85vw);
-            aspect-ratio: 1;
-            border-radius: 50%;
-
-            background:
-                radial-gradient(
-                    circle,
-                    #ffffff 0 34%,
-                    #e8faf7 35% 58%,
-                    transparent 59%
-                );
-
-            border: 1px solid #bfe7e3;
-
-            box-shadow:
-                0 30px 70px rgba(13, 52, 76, 0.14);
-
-            display: grid;
-            place-items: center;
-        }
-
-        .medical-cross {
-            width: 105px;
-            height: 105px;
-            border-radius: 28px;
-
-            background: linear-gradient(
-                135deg,
-                #087f79,
-                #19b8aa
-            );
-
-            color: white;
-
-            display: grid;
-            place-items: center;
-
-            font-size: 64px;
-            font-weight: bold;
-        }
-
-        /* =========================
-           COMMON SECTION
-        ========================= */
-
-        section {
-            padding: 90px 20px;
-        }
-
-        .container {
-            max-width: 1280px;
-            margin: auto;
-        }
-
-        .heading {
-            max-width: 760px;
-            margin: 0 auto 45px;
-            text-align: center;
-        }
-
-        .eyebrow {
-            color: #087f79;
-            font-size: 12px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .heading h2 {
-            margin: 8px 0 12px;
-            color: #0d344c;
-            font-size: clamp(31px, 4vw, 46px);
-        }
-
-        .heading p {
-            color: #60788b;
-        }
-
-        /* =========================
-           DIVISIONS
-        ========================= */
-
-        .divisions {
-            background: white;
-        }
-
-        .division-grid {
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 15px;
-        }
-
-        .division-card {
-            padding: 22px 12px;
-            text-align: center;
-
-            background: white;
-            border: 1px solid #dce8ef;
-            border-radius: 16px;
-
-            transition: 0.2s;
-        }
-
-        .division-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 10px 25px rgba(13, 52, 76, 0.10);
-        }
-
-        .division-card b {
-            display: block;
-            margin-bottom: 5px;
-            color: #087f79;
-        }
-
-        .division-card span {
-            color: #60788b;
-            font-size: 13px;
-        }
-
-        /* =========================
-           PRODUCTS
-        ========================= */
-
-        .products {
-            background: #f2f8fb;
-        }
-
-        .toolbar {
-            max-width: 1050px;
-            margin: 0 auto 25px;
-
-            display: grid;
-            grid-template-columns: 1fr 210px;
-            gap: 10px;
-        }
-
-        .search,
-        .filter {
-            width: 100%;
-            min-height: 52px;
-
-            padding: 12px 15px;
-
-            border: 1px solid #dce8ef;
-            border-radius: 11px;
-
-            background: white;
-            color: #17324d;
-
-            outline: none;
-        }
-
-        .meta {
-            max-width: 1050px;
-            margin: 0 auto 22px;
-
-            display: flex;
-            justify-content: space-between;
-
-            color: #60788b;
-            font-size: 14px;
-        }
-
-        .meta strong {
-            color: #087f79;
-        }
-
-        .product-list {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
-
-        .product-card {
-            padding: 20px;
-
-            background: white;
-            border: 1px solid #dce8ef;
-            border-radius: 16px;
-
-            box-shadow:
-                0 5px 20px rgba(13, 52, 76, 0.06);
-
-            transition: 0.2s;
-        }
-
-        .product-card:hover {
-            transform: translateY(-3px);
-
-            box-shadow:
-                0 12px 30px rgba(13, 52, 76, 0.10);
-        }
-
-        .product-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 10px;
-
-            margin-bottom: 9px;
-        }
-
-        .product-number {
-            padding: 5px 8px;
-
-            border-radius: 20px;
-
-            background: #e9f8f6;
-            color: #087f79;
-
-            font-size: 11px;
-            font-weight: 900;
-        }
-
-        .category {
-            color: #60788b;
-            font-size: 11px;
-            font-weight: 800;
-        }
-
-        .product-card h3 {
-            margin-bottom: 7px;
-            color: #0d344c;
-            font-size: 18px;
-        }
-
-        .product-card p {
-            color: #60788b;
-            font-size: 13px;
-        }
-
-        .empty {
-            display: none;
-
-            padding: 50px;
-
-            background: white;
-            border: 1px solid #dce8ef;
-            border-radius: 16px;
-
-            text-align: center;
-            color: #60788b;
-        }
-
-        /* =========================
-           ABOUT
-        ========================= */
-
-        .about {
-            background: white;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about h3 {
-            margin: 10px 0 15px;
-            color: #0d344c;
-            font-size: 30px;
-        }
-
-        .about p {
-            margin-bottom: 13px;
-            color: #60788b;
-        }
-
-        .points {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 25px;
-        }
-
-        .point {
-            padding: 16px;
-
-            background: #f2faf9;
-            border: 1px solid #d9f0ed;
-            border-radius: 12px;
-        }
-
-        .point b {
-            display: block;
-            color: #087f79;
-        }
-
-        .about-box {
-            min-height: 380px;
-
-            padding: 35px;
-
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #073d50,
-                    #0b817b
-                );
-
-            color: white;
-
-            display: flex;
-            align-items: flex-end;
-
-            box-shadow:
-                0 25px 60px rgba(13, 52, 76, 0.15);
-        }
-
-        .about-box-inner {
-            padding: 24px;
-
-            border-radius: 17px;
-
-            background: rgba(255, 255, 255, 0.10);
-            border: 1px solid rgba(255, 255, 255, 0.18);
-        }
-
-        .about-box h3 {
-            color: white;
-        }
-
-        .about-box p {
-            color: #d5eef0;
-        }
-
-        /* =========================
-           VALUES
-        ========================= */
-
-        .values {
-            background: #f3f8fa;
-        }
-
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-        }
-
-        .value-card {
-            padding: 25px;
-
-            background: white;
-            border: 1px solid #dce8ef;
-            border-radius: 16px;
-        }
-
-        .value-card b {
-            color: #087f79;
-            font-size: 12px;
-            letter-spacing: 2px;
-        }
-
-        .value-card h3 {
-            margin: 15px 0 7px;
-            color: #0d344c;
-        }
-
-        .value-card p {
-            color: #60788b;
-            font-size: 14px;
-        }
-
-        /* =========================
-           CONTACT
-        ========================= */
-
-        .contact {
-            background: white;
-        }
-
-        .contact-box {
-            padding: 45px;
-
-            border-radius: 23px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #083e51,
-                    #087f79
-                );
-
-            color: white;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
-        }
-
-        .contact-box p {
-            margin-top: 8px;
-            color: #d5eef0;
-        }
-
-        .contact-box a {
-            padding: 13px 20px;
-
-            border-radius: 10px;
-
-            background: white;
-            color: #087f79;
-
-            font-weight: 900;
-            white-space: nowrap;
-        }
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            padding: 35px 20px;
-
-            background: #09283a;
-            color: #cfe4e8;
-        }
-
-        .footer-inner {
-            max-width: 1280px;
-            margin: auto;
-
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            flex-wrap: wrap;
-
-            font-size: 13px;
-        }
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 1000px) {
-
-            .hero-inner,
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .division-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .product-list {
-                grid-template-columns: 1fr;
-            }
-
-            .nav-links {
-                display: none;
-            }
-        }
-
-        @media (max-width: 650px) {
-
-            .top-bar-inner {
-                display: block;
-            }
-
-            .top-bar-inner span {
-                display: block;
-                margin: 2px 0;
-            }
-
-            .brand-text {
-                font-size: 17px;
-            }
-
-            .brand-logo {
-                width: 50px;
-                height: 50px;
-            }
-
-            .division-grid,
-            .values-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-
-            .toolbar {
-                grid-template-columns: 1fr;
-            }
-
-            .points {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-box {
-                display: block;
-                padding: 30px;
-            }
-
-            .contact-box a {
-                display: inline-block;
-                margin-top: 20px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ziyana Lifesciences Private Limited | Pharmaceutical & Healthcare Products</title>
+<style>
+:root{--primary:#087f79;--primary2:#19b8aa;--navy:#0d344c;--text:#17324d;--muted:#60788b;--bg:#f4f9fb;--card:#fff;--border:#dce8ef}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,select{font:inherit}
+.top-logo{background:#fff;text-align:center;padding:18px 20px 12px;border-bottom:1px solid var(--border)}
+.top-logo img{width:min(420px,90vw);height:auto;display:inline-block}
+.top{background:#09283a;color:#d9edf2;padding:9px 20px;font-size:13px}
+.topin{max-width:1280px;margin:auto;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
+.nav{max-width:1280px;margin:auto;min-height:76px;padding:10px 20px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--primary);min-width:220px}
+.mark{width:46px;height:46px;border-radius:13px;background:linear-gradient(135deg,var(--primary),var(--primary2));display:grid;place-items:center;color:white;font-size:22px}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.2px}
+.navlinks{display:flex;gap:5px;flex-wrap:wrap;justify-content:center}
+.navlinks a{padding:9px 11px;border-radius:9px;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--primary);background:#eaf8f7}
+.hero{background:radial-gradient(circle at 85% 15%,rgba(25,184,170,.18),transparent 28%),linear-gradient(135deg,#effcfb,#f5f8ff 60%,#fff);padding:85px 20px 110px}
+.hero-in{max-width:1280px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+.badge{display:inline-block;padding:8px 14px;border:1px solid #bfe7e3;border-radius:99px;color:var(--primary);font-weight:800;font-size:13px;background:#fff}
+h1{font-size:clamp(44px,6vw,76px);line-height:1.04;letter-spacing:-2.5px;color:var(--navy);margin:20px 0}
+h1 span{color:var(--primary)}
+.lead{font-size:19px;color:var(--muted);max-width:700px;margin-bottom:28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:13px 20px;border-radius:10px;font-weight:800;border:1px solid var(--border);display:inline-block}
+.primary{background:linear-gradient(135deg,var(--primary),#0a9d94);color:#fff;border:0}
+.visual{min-height:360px;display:grid;place-items:center}
+.hero-logo{width:min(560px,100%);background:#fff;border:1px solid var(--border);border-radius:24px;padding:14px;box-shadow:0 25px 60px rgba(13,52,76,.14);overflow:hidden}
+.hero-logo img{display:block;width:100%;height:auto;object-fit:contain}
+.container{max-width:1280px;margin:auto;padding:0 20px}
+section{padding:80px 0}
+.heading{text-align:center;margin-bottom:35px}
+.eyebrow{color:var(--primary);font-weight:900;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.heading h2{font-size:40px;color:var(--navy);margin-top:8px}
+.divgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}
+.divcard{background:#fff;border:1px solid var(--border);padding:22px;border-radius:18px;text-align:center;box-shadow:0 10px 30px rgba(13,52,76,.05)}
+.divcard b{display:block;color:var(--primary);margin-bottom:5px}
+.products{background:#eef7fa}
+.toolbar{display:flex;gap:12px;margin-bottom:18px}
+.search,.filter{background:#fff;border:1px solid var(--border);border-radius:10px;padding:13px 15px;outline:none}
+.search{flex:1}
+.filter{min-width:200px}
+.meta{display:flex;justify-content:space-between;color:var(--muted);font-size:14px;margin-bottom:18px}
+.product-list{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.product-card{background:#fff;border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 8px 25px rgba(13,52,76,.05)}
+.product-top{display:flex;justify-content:space-between;gap:10px;margin-bottom:12px}
+.product-no{font-weight:900;color:var(--primary)}
+.category{font-size:11px;font-weight:800;color:var(--primary);background:#eaf8f7;padding:5px 8px;border-radius:20px}
+.product-card h3{font-size:18px;color:var(--navy);margin-bottom:8px}
+.product-card p{font-size:13px;color:var(--muted);line-height:1.55}
+.empty{display:none;text-align:center;padding:40px;color:var(--muted)}
+.about{background:#fff}
+.aboutgrid{display:grid;grid-template-columns:1.3fr .7fr;gap:50px;align-items:center}
+.aboutgrid h3{font-size:30px;color:var(--navy);margin:10px 0 15px}
+.aboutgrid p{color:var(--muted);margin-bottom:12px}
+.points{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.point{padding:15px;border:1px solid var(--border);border-radius:12px;background:#f8fcfd}
+.point b{display:block;color:var(--navy)}
+.point span{font-size:13px;color:var(--muted)}
+.aboutbox{background:linear-gradient(135deg,var(--primary),var(--navy));color:#fff;border-radius:24px;padding:40px}
+.aboutbox h3{color:#fff}
+.aboutbox p{color:#d9edf2}
+.values{background:#f4f9fb}
+.vgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.vcard{background:#fff;border:1px solid var(--border);border-radius:18px;padding:28px}
+.vcard>b{color:var(--primary);font-size:28px}
+.vcard h3{color:var(--navy);margin:8px 0}
+.vcard p{color:var(--muted)}
+.contact{background:#fff}
+.contactbox{background:linear-gradient(135deg,#09283a,#0d5960);color:#fff;border-radius:22px;padding:40px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.contactbox h2{font-size:32px}
+.contactbox p{color:#d9edf2}
+.contactbox a{background:#fff;color:var(--primary);padding:13px 20px;border-radius:10px;font-weight:900}
+footer{background:#09283a;color:#d9edf2;padding:25px 20px}
+.foot{max-width:1280px;margin:auto;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+@media(max-width:1000px){.divgrid{grid-template-columns:repeat(3,1fr)}.hero-in,.aboutgrid{grid-template-columns:1fr}.product-list{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.nav{flex-direction:column}.divgrid,.product-list,.vgrid{grid-template-columns:1fr}.toolbar{flex-direction:column}.filter{width:100%}.meta{flex-direction:column;gap:5px}.contactbox{flex-direction:column;align-items:flex-start}.points{grid-template-columns:1fr}}
+</style>
 </head>
 
 <body>
 
-    <!-- =========================
-         TOP BAR
-    ========================== -->
-
-    <div class="top-bar">
-        <div class="top-bar-inner">
-            <span>Pharmaceutical & Healthcare Products</span>
-            <span>info@ziyanalifesciences.com</span>
-        </div>
-    </div>
-
-
-    <!-- =========================
-         HEADER + LOGO
-    ========================== -->
-
-    <header>
-
-        <div class="nav">
-
-            <a href="#home" class="brand">
-
-                <!-- CORRECT IMAGE PATH -->
-                <img
-                    src="./images/last.jpg"
-                    alt="Ziyana Lifesciences Logo"
-                    class="brand-logo"
-                >
-
-                <div class="brand-text">
-                    Ziyana Lifesciences
-                    <small>PRIVATE LIMITED</small>
-                </div>
-
-            </a>
-
-
-            <nav class="nav-links">
-
-                <a href="#home">Home</a>
-                <a href="#divisions">Divisions</a>
-                <a href="#products">Products</a>
-                <a href="#about">About</a>
-                <a href="#values">Values</a>
-                <a href="#contact">Contact</a>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section class="hero" id="home">
-
-        <div class="hero-inner">
-
-            <div>
-
-                <span class="badge">
-                    Trusted Pharmaceutical & Healthcare Company
-                </span>
-
-                <h1>
-                    Better Health.
-                    <span>Better Future.</span>
-                </h1>
-
-                <p class="hero-text">
-                    Ziyana Lifesciences Private Limited is focused on
-                    delivering quality pharmaceutical and healthcare
-                    products across multiple therapeutic categories.
-                </p>
-
-                <div class="buttons">
-
-                    <a
-                        href="#products"
-                        class="button button-primary"
-                    >
-                        Explore Products
-                    </a>
-
-                    <a
-                        href="#contact"
-                        class="button"
-                    >
-                        Contact Us
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <div class="hero-visual">
-
-                <div class="hero-circle">
-
-                    <div class="medical-cross">
-                        +
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         DIVISIONS
-    ========================== -->
-
-    <section class="divisions" id="divisions">
-
-        <div class="container">
-
-            <div class="heading">
-
-                <span class="eyebrow">
-                    Our Divisions
-                </span>
-
-                <h2>
-                    Healthcare Categories
-                </h2>
-
-                <p>
-                    Explore our pharmaceutical and healthcare
-                    product portfolio.
-                </p>
-
-            </div>
-
-
-            <div class="division-grid">
-
-                <div class="division-card">
-                    <b>Tablets</b>
-                    <span>Solid oral products</span>
-                </div>
-
-                <div class="division-card">
-                    <b>Capsules</b>
-                    <span>Capsule formulations</span>
-                </div>
-
-                <div class="division-card">
-                    <b>Liquids</b>
-                    <span>Syrups & suspensions</span>
-                </div>
-
-                <div class="division-card">
-                    <b>Injectables</b>
-                    <span>Injectable products</span>
-                </div>
-
-                <div class="division-card">
-                    <b>Paediatric</b>
-                    <span>Drops & dry syrups</span>
-                </div>
-
-                <div class="division-card">
-                    <b>Derma & Care</b>
-                    <span>Topical & wellness</span>
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         PRODUCTS
-    ========================== -->
-
-    <section class="products" id="products">
-
-        <div class="container">
-
-            <div class="heading">
-
-                <span class="eyebrow">
-                    Product Portfolio
-                </span>
-
-                <h2>
-                    Our Products
-                </h2>
-
-                <p>
-                    Explore our pharmaceutical and healthcare
-                    product portfolio.
-                </p>
-
-            </div>
-
-
-            <div class="toolbar">
-
-                <input
-                    type="text"
-                    id="search"
-                    class="search"
-                    placeholder="Search product, composition or category..."
-                    autocomplete="off"
-                >
-
-                <select
-                    id="filter"
-                    class="filter"
-                >
-
-                    <option value="all">
-                        All Categories
-                    </option>
-
-                </select>
-
-            </div>
-
-
-            <div class="meta">
-
-                <span>
-                    Showing
-                    <strong id="count">12</strong>
-                    products
-                </span>
-
-                <span>
-                    Search & Filter Enabled
-                </span>
-
-            </div>
-
-
-            <div
-                class="product-list"
-                id="productList"
-            >
-
-                <!-- PRODUCT 001 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="aziryl-250 azithromycin 250 mg tablet"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            001
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        AZIRYL-250
-                    </h3>
-
-                    <p>
-                        AZITHROMYCIN 250 MG TABLET
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 002 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="aziryl-500 azithromycin 500 mg tablet"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            002
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        AZIRYL-500
-                    </h3>
-
-                    <p>
-                        AZITHROMYCIN 500 MG TABLET
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 003 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="amlopiz-at amlodipine atenolol"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            003
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        AMLOPIZ-AT
-                    </h3>
-
-                    <p>
-                        AMLODIPINE 5MG + ATENOLOL 50MG TABLETS
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 004 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="calziway calcium magnesium vitamin d3 zinc"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            004
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        CALZIWAY
-                    </h3>
-
-                    <p>
-                        CALCIUM + MAGNESIUM + VITAMIN D3 + ZINC
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 005 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="calziway-xt calcium vitamin d3 methylcobalamin"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            005
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        CALZIWAY-XT
-                    </h3>
-
-                    <p>
-                        CALCIUM + VITAMIN D3 + METHYLCOBALAMIN +
-                        L-METHYLFOLATE
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 006 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="difrol diclofenac potassium paracetamol"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            006
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        DIFROL
-                    </h3>
-
-                    <p>
-                        DICLOFENAC POTASSIUM 50MG +
-                        PARACETAMOL 325MG
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 007 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="dydronol dydrogesterone"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            007
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        DYDRONOL
-                    </h3>
-
-                    <p>
-                        DYDROGESTERONE TABLETS IP 10MG
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 008 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="etoaix-90 etoricoxib"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            008
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        ETOAIX-90
-                    </h3>
-
-                    <p>
-                        ETORICOXIB 90MG
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 009 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="febryl-40 febuxostat"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            009
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        FEBRYL-40
-                    </h3>
-
-                    <p>
-                        FEBUXOSTAT 40MG
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 010 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="glypster-m1 glimepiride metformin"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            010
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        GLYPSTER-M1
-                    </h3>
-
-                    <p>
-                        GLIMEPIRIDE 1MG +
-                        METFORMIN HYDROCHLORIDE 500MG
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 011 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="pantoziya-40 pantoprazole"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            011
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        PANTOZIYA-40
-                    </h3>
-
-                    <p>
-                        PANTOPRAZOLE 40MG TABLET
-                    </p>
-
-                </article>
-
-
-                <!-- PRODUCT 012 -->
-
-                <article
-                    class="product-card"
-                    data-category="Tablets"
-                    data-search="ziyanil-650 paracetamol"
-                >
-
-                    <div class="product-top">
-
-                        <span class="product-number">
-                            012
-                        </span>
-
-                        <span class="category">
-                            Tablets
-                        </span>
-
-                    </div>
-
-                    <h3>
-                        ZIYANIL-650
-                    </h3>
-
-                    <p>
-                        PARACETAMOL 650MG TABLET
-                    </p>
-
-                </article>
-
-            </div>
-
-
-            <div
-                class="empty"
-                id="empty"
-            >
-                No products found.
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         ABOUT
-    ========================== -->
-
-    <section class="about" id="about">
-
-        <div class="container">
-
-            <div class="about-grid">
-
-                <div>
-
-                    <span class="eyebrow">
-                        About Us
-                    </span>
-
-                    <h3>
-                        Ziyana Lifesciences Private Limited
-                    </h3>
-
-                    <p>
-                        Ziyana Lifesciences is focused on
-                        pharmaceutical and healthcare products
-                        across multiple therapeutic categories.
-                    </p>
-
-                    <p>
-                        With
-                        <strong>25+ years of experience in the healthcare industry</strong>,
-                        we are committed to building a reliable
-                        healthcare product portfolio.
-                    </p>
-
-
-                    <div class="points">
-
-                        <div class="point">
-                            <b>Quality Focus</b>
-                            <span>
-                                Healthcare products across
-                                multiple categories.
-                            </span>
-                        </div>
-
-                        <div class="point">
-                            <b>Wide Portfolio</b>
-                            <span>
-                                Pharmaceutical products for
-                                diverse healthcare needs.
-                            </span>
-                        </div>
-
-                        <div class="point">
-                            <b>Healthcare</b>
-                            <span>
-                                Focused on healthcare and
-                                better living.
-                            </span>
-                        </div>
-
-                        <div class="point">
-                            <b>Trust</b>
-                            <span>
-                                Professional and reliable
-                                healthcare presence.
-                            </span>
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-box">
-
-                    <div class="about-box-inner">
-
-                        <h3>
-                            Healthcare • Quality • Trust
-                        </h3>
-
-                        <p>
-                            Committed to healthcare and
-                            better living.
-                        </p>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         VALUES
-    ========================== -->
-
-    <section class="values" id="values">
-
-        <div class="container">
-
-            <div class="heading">
-
-                <span class="eyebrow">
-                    Our Values
-                </span>
-
-                <h2>
-                    What We Stand For
-                </h2>
-
-            </div>
-
-
-            <div class="values-grid">
-
-                <div class="value-card">
-
-                    <b>01</b>
-
-                    <h3>
-                        Quality
-                    </h3>
-
-                    <p>
-                        We focus on quality-oriented
-                        pharmaceutical and healthcare
-                        products.
-                    </p>
-
-                </div>
-
-
-                <div class="value-card">
-
-                    <b>02</b>
-
-                    <h3>
-                        Trust
-                    </h3>
-
-                    <p>
-                        We believe in transparent,
-                        professional and reliable
-                        healthcare services.
-                    </p>
-
-                </div>
-
-
-                <div class="value-card">
-
-                    <b>03</b>
-
-                    <h3>
-                        Responsibility
-                    </h3>
-
-                    <p>
-                        We are committed to serving
-                        diverse healthcare needs.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         CONTACT
-    ========================== -->
-
-    <section class="contact" id="contact">
-
-        <div class="container">
-
-            <div class="contact-box">
-
-                <div>
-
-                    <h2>
-                        Let's Connect
-                    </h2>
-
-                    <p>
-                        Email us for product,
-                        business or general enquiries.
-                    </p>
-
-                </div>
-
-                <a href="mailto:info@ziyanalifesciences.com">
-                    Email Us →
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <div class="footer-inner">
-
-            <span>
-                © 2001 Ziyana Lifesciences
-            </span>
-
-            <span>
-                Head Office: Plot No.34-58 V.P.O. Mohra,
-                National Highway-1, Ambala Cantt 133004, Haryana
-            </span>
-
-        </div>
-
-    </footer>
-
-
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
-    <script>
-
-        const cards =
-            [...document.querySelectorAll(".product-card")];
-
-        const search =
-            document.getElementById("search");
-
-        const filter =
-            document.getElementById("filter");
-
-        const count =
-            document.getElementById("count");
-
-        const empty =
-            document.getElementById("empty");
-
-
-        /* CREATE CATEGORY FILTER */
-
-        const categories =
-            [...new Set(
-                cards.map(card =>
-                    card.dataset.category
-                )
-            )].sort();
-
-
-        categories.forEach(category => {
-
-            const option =
-                document.createElement("option");
-
-            option.value = category;
-
-            option.textContent = category;
-
-            filter.appendChild(option);
-
-        });
-
-
-        /* SEARCH + FILTER */
-
-        function applyFilter() {
-
-            const searchText =
-                search.value
-                    .toLowerCase()
-                    .trim();
-
-            const selectedCategory =
-                filter.value;
-
-            let visibleCount = 0;
-
-
-            cards.forEach(card => {
-
-                const productText =
-                    card.dataset.search
-                        .toLowerCase();
-
-                const cardCategory =
-                    card.dataset.category;
-
-
-                const categoryMatch =
-                    selectedCategory === "all" ||
-                    cardCategory === selectedCategory;
-
-
-                const searchMatch =
-                    !searchText ||
-                    productText.includes(searchText);
-
-
-                const show =
-                    categoryMatch &&
-                    searchMatch;
-
-
-                card.style.display =
-                    show ? "block" : "none";
-
-
-                if (show) {
-                    visibleCount++;
-                }
-
-            });
-
-
-            count.textContent =
-                visibleCount;
-
-
-            empty.style.display =
-                visibleCount === 0
-                    ? "block"
-                    : "none";
-        }
-
-
-        search.addEventListener(
-            "input",
-            applyFilter
-        );
-
-
-        filter.addEventListener(
-            "change",
-            applyFilter
-        );
-
-
-        applyFilter();
-
-    </script>
+<div class="top-logo">
+<img src="./images/last.jpg" alt="Ziyana Lifesciences Private Limited Logo">
+</div>
+
+<div class="top">
+<div class="topin">
+<span>Ziyana Lifesciences Private Limited</span>
+<span>Healthcare • Quality • Trust</span>
+</div>
+</div>
+
+<header>
+<div class="nav">
+<div class="brand">
+<div class="mark">Z</div>
+<div>Ziyana Lifesciences<small>PRIVATE LIMITED</small></div>
+</div>
+
+<nav class="navlinks">
+<a href="#home">Home</a>
+<a href="#divisions">Divisions</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#values">Values</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<section class="hero" id="home">
+<div class="hero-in">
+<div>
+<span class="badge">Committed to Healthcare and Better Living</span>
+<h1>Trusted <span>Healthcare</span> Solutions</h1>
+<p class="lead">Ziyana Lifesciences Private Limited is focused on delivering quality pharmaceutical and healthcare products across multiple therapeutic categories.</p>
+<div class="btns">
+<a class="btn primary" href="#products">View Products</a>
+<a class="btn" href="#contact">Contact Us</a>
+</div>
+</div>
+
+<div class="visual">
+<div class="hero-logo">
+<img src="./images/last.jpg" alt="Ziyana Lifesciences Private Limited Logo">
+</div>
+</div>
+</div>
+</section>
+
+<section id="divisions">
+<div class="container">
+<div class="heading">
+<span class="eyebrow">Our Divisions</span>
+<h2>Healthcare Product Categories</h2>
+</div>
+
+<div class="divgrid">
+<div class="divcard"><b>01</b>Tablets</div>
+<div class="divcard"><b>02</b>Capsules</div>
+<div class="divcard"><b>03</b>Liquids</div>
+<div class="divcard"><b>04</b>Injectables</div>
+<div class="divcard"><b>05</b>Paediatric</div>
+<div class="divcard"><b>06</b>Derma & Care</div>
+</div>
+</div>
+</section>
+
+<section class="products" id="products">
+<div class="container">
+
+<div class="heading">
+<span class="eyebrow">Product Catalogue</span>
+<h2>Our Products</h2>
+</div>
+
+<div class="toolbar">
+<input id="search" class="search" placeholder="Search product, composition or category..." autocomplete="off">
+<select id="filter" class="filter">
+<option value="all">All Categories</option>
+</select>
+</div>
+
+<div class="meta">
+<span>Showing <strong id="count">307</strong> products</span>
+<span>Search &amp; filter enabled</span>
+</div>
+
+<div class="product-list" id="productList"></div>
+
+<div class="empty" id="empty">No products found. Try another search.</div>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<div class="aboutgrid">
+<div>
+<span class="eyebrow">About Us</span>
+<h3>Ziyana Lifesciences Private Limited</h3>
+<p>We are focused on pharmaceutical and healthcare products across a broad range of categories, with a portfolio covering tablets, capsules, syrups, paediatric products, injectables, topical products, herbal products and more.</p>
+<p>With <strong>25+ years of experience in the healthcare industry</strong>, we continue to build a reliable pharmaceutical and healthcare product portfolio.</p>
+
+<div class="points">
+<div class="point"><b>Quality Focus</b><span>Healthcare products across multiple categories.</span></div>
+<div class="point"><b>Wide Portfolio</b><span>307 catalogue entries included.</span></div>
+<div class="point"><b>Healthcare</b><span>Products for diverse healthcare needs.</span></div>
+<div class="point"><b>Trust</b><span>Professional corporate presentation.</span></div>
+</div>
+</div>
+
+<div class="aboutbox">
+<div>
+<h3>Healthcare • Quality • Trust</h3>
+<p>Committed to building a reliable pharmaceutical and healthcare product portfolio.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="values" id="values">
+<div class="container">
+<div class="heading">
+<span class="eyebrow">Our Values</span>
+<h2>What We Stand For</h2>
+</div>
+
+<div class="vgrid">
+<div class="vcard"><b>01</b><h3>Quality</h3><p>We present our portfolio with a clear focus on quality-oriented healthcare products.</p></div>
+<div class="vcard"><b>02</b><h3>Trust</h3><p>Transparent product information and a professional healthcare presence.</p></div>
+<div class="vcard"><b>03</b><h3>Responsibility</h3><p>Serving healthcare needs with a broad and organized product portfolio.</p></div>
+</div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container">
+<div class="contactbox">
+<div>
+<h2>Let’s Connect</h2>
+<p>Email us for product, business or general enquiries.</p>
+</div>
+<a href="mailto:ziyanalifesciences0456@gmail.com">Email Us →</a>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="foot">
+<span>© 2026 Ziyana Lifesciences Private Limited</span>
+<span>Head Office: Plot No.34-58 V.P.O. Mohra, National Highway-1, Ambala Cantt 133004, Haryana</span>
+</div>
+</footer>
+
+<script>
+const products=[
+
+    ["001","Tablets","AZIRYL-250","AZITHROMYCIN 250 MG TABLET 10x6"],
+["002","Tablets","AZIRYL-500","AZITHROMYCIN 500 MG TABLET 10x3"],
+["003","Tablets","AZIRYL-500","AZITHROMYCIN 500 MG TABLET 10x5"],
+["004","Tablets","AMLOPIZ-AT","AMLODIPINE 5MG+ ATENOLOL 50 MG TABLETS IP 20*1"],
+["005","Tablets","BRINK-UP","PANCREATIN 192MG , BILE CONSTITUENTS 25MG AND 10*1 ACTIVATED"],
+["006","Tablets","CALZIWAY","CALCIUM CITRATE 1000MG +MAGNESIUM+ VITAMIN D3+ ZINC 10x1 TABLET"],
+["007","Tablets","CALZIWAY-XT","CALCIUM 500MG VITAMAIN D3 IP 2000IU METHYLCOBALAMIN IP 1500MCG L- 10x1 METHYLFOLATE CALCIUM 1MG PYRIDOXAL-5 PHOSPHATE 0.5 MG TABLETS"],
+["008","Tablets","CALZIWAY-FAST","CALCIUM CITRATE 1000MG +MAGNESIUM CHLORIDE 100MG+CISSUS QUADRANGULARIS EXTRACT 250MG +VITAMIN-C 40MG+ZINC ACETATE 28MG+ VITAMIN K2 AS MK-7 55MCG+VITAMIN-D 600IU"],
+["009","Tablets","CALZICORAL-D3","CORAL CALCIUM &VITAMIN D3 TABLET 10x15 A A"],
+["010","Tablets","CARTISTING- TOTAL","ROSEHIP EXTRACT 275MG+COLLAGEN TYPE 40MG+ GLUCOSAMINE SULPHATE 10x1x10 HYALURONATE 30MG+ BOSWELIA SERRATA 75MG"],
+["011","Tablets","DIFROL","DICLOFENAC POTASSIUM 50MG & PARACETAMOL 325MG TABLET"],
+["012","Tablets","DIFROL-S","DICLOFENAC POTTASSIUM 50MG + & SERRATIOPEPTIDASE 10MG"],
+["013","Tablets","DIFROL-SP","DICLOFENAC POTTASSIUM 50MG + PCML 325 MG + SERRATIOPEPTIDASE"],
+["014","Tablets","DIFROL-MR","DICLOFENAC POTTASSIUM 50MG + PCML 325 MG + CHLORZOXAZONE 250MG TABLET"],
+["015","Tablets","DYDRONOL","DYDROGESTERONE TABLETS IP 10 MG"],
+["016","Tablets","DOXIPROL-OD","DOXYLAMINE SUCCINATE20MG, PYRIDOXINE HCI 20MG, FOLIC ACID"],
+["017","Tablets","DROWAY-DM","DROTAVARIN 80MG + MEFENAMIC ACID 250MG TABLET"],
+["018","Tablets","DROWAY-A","ACECLOFENAC 100MG +DROTAVARIN 80MG HYDROCHLORIDE TABLETS"],
+["019","Tablets","DA RYL-GOLD","SILDENAFIL 50MG & DAPOXETINE 30MG TABLETS"],
+["020","Tablets","ETOAIX-90","ETORICOXIB 90 MG."],
+["021","Tablets","ETOAIX-P","ETORICOXIB 60MG + PARACETAMOL 325MG."],
+["022","Tablets","ETOAIX-MR","ETORICOXIB 60MG + THIOCOLCHIOSIDE 4MG."],
+["023","Tablets","FEBRYL - 40","FEBUXOSTAT 40MG"],
+["024","Tablets","FOLGREAT- PLUS","METHYLCOBALAMIN IP1500MCG + L-METHYLFOLATE CALCIUM 1MG+ PYRIDOXAL- 5- PHOSPHATE 0.5MG TABLET"],
+["025","Tablets","GLYPSTER-M1","GLIMEPIRIDE 1MG AND METFORMIN HYDROCHLORIDE 500MG"],
+["026","Tablets","GLYPSTER-M2","GLIMEPIRIDE 2MG AND METFORMIN HYDROCHLORIDE 500MG"],
+["027","Tablets","FEXODRAL-120","FEXOFENADINE HYDROCHLORIDE 120MG TABLET"],
+["028","Tablets","KETOPRAZ- 10DT","KETOROLAC 10MG DISPERSIBLE TAB"],
+["029","Tablets","MYOVAS-10","ROSUVASTATIN CALCIUM TABLETS IP 10*1 ALU"],
+["030","Tablets","MBIUS-4","METHYLPREDNISOLONE TABLETS IP 10x1 ALU"],
+["031","Tablets","MBIUS-8","METHYLPREDNISOLONE 8MG TABLETS IP 10x1 ALU"],
+["032","Tablets","MEBEWAY-C","CHLORDIAZEPOXIDE 5MG + MEBEVERINE 10*1 CHLORIDE135MG ALU"],
+["033","Tablets","MESAWELL-OD","MESALAZINE PROLONGED RELEASE TABLET IP 1200MG 10*1 BLI"],
+["034","Tablets","MYOZOLID-600","LINEZOLID TABLETS IP 10*1 /AL"],
+["035","Tablets","MYOLACT","GLUTAMINE,GLUTATHIONE,TAURINE,ASPARAGUS RACEMOSUS,WITHANIA 10x1 FERA & VITAMINS TABLET ALU"],
+["036","Tablets","MYOTRIG","MYO-INOSITOL(IR)600MG+MYO-INOSITOL(SR)500MG+ D-CHIRO 10x1 TOL27.6MG+L-METHYLFOLATE CALCIUM 1MG+CHROMIUM PICOLINATE ALU G +VITAMIN D2 400 IU & BIOTIN 10MCG TABLETS"],
+["037","Tablets","MELOREST","MELATONIN 5MG+ L-THEANINE 100MG+ VATERIAN ROOT EXTRACT 75MG 10*1 BLE TABLETS BLI"],
+["038","Tablets","NEPLODOM","NAPROXEN SODIUM & DOMPERIDONE TABLETS 10x1 BLI"],
+["039","Tablets","NULEVOWAY","LEVOFLOXACIN 500 MG TABLET 10x1"],
+["040","Tablets","NUROPROL-OD","ALPHA LIPOICACID,PYRIDOXINE HCI METHYLCOBALAMIN + FOLICACID 10*1 MIN D3 ALU"],
+["041","Tablets","NUROPROL-NT","PREGABALIN IP 75MG NORTRIPTYLINE HYDROCHLORIDE 10MG TABLET 10*1 ALU"],
+["042","Tablets","NIMOZ-P","NIMESULIDE 100MG + PARACETAMOL 325MG TABLET 10x1 BLI"],
+["043","Tablets","NIMOZ COLD","NIMESULIDE 100MG, PHENYLEPHRINE 10MG, CETIRIZINE 10*1 BLI"],
+["044","Tablets","NOSIWAY","PHENYL EPHERIN 5MG + PARACETAMOL 325MG + CAFFIENE 30MG + 10x1 NHYDRAMINE HYDROCHLORIDE 5MG TABLE BLI"],
+["045","Tablets","NOSIWAY COLD","PCM 500MG,PHENYLEPHRINE 5MG.CAFFEINE 30MG.DIPHENHYDRAMINE 10*1 BLI"],
+["046","Tablets","NOSIWAY TOTAL PCM 325MG PHENYLEPHRINE 5MG AMBROXOL 15MG CETRIZINE 5MG","10x10 5% 686.00 85.00 10+1 NSIN 50MG BLI"],
+["047","Tablets","NUTEXID-MF","TRANEXAMIC ACID &MEFENAMIC ACID TABLET 10*1 AL"],
+["048","Tablets","NEURORLX-LC","L-CARNITINE L-TARTRATE,METHYLCOBALAMIN & FOLIC ACID TABLET 10x1 ALU"],
+["049","Tablets","LETIG 2.5","LETROZOLE 2.5MG TABLET 10x1 ALU"],
+["050","Tablets","OXIZIYA-I","LUTEIN,ZEAXANTHIN,ASTAXANTHIN,VITAMIN C,VITAMIN 10x1 C,COPPER,BILBERRY EXTRACT, VITAMIN A,AND L-GLUTATHIONE ALU"],
+["051","Tablets","OXIZIYA-MAX","EPA 325MG+DHA 175MG+BETACAROTENE 30MG + BIOTIN 30MG+ ZINC 10x1 ASTAXANTHIN 6MG+LUTEIN 5MG+VITAMIN C 5MG+ GLUTATHIONE ALU VITAMIN E 5MG+GREEN TEA EXT 5M + LYCOPENE 2500MCG+ NTHIN"],
+["052","Tablets","OXIBION-FORTE","TABLRTS OF VITAMIN B COMPLEX WITH B12 THIAMINE 25x1 ITRATE 1.8MG + RIBOFLAVIN 2.5MG + PYRIDOXINE HYDROCHLORIDE BLI + CYANOCOBALMAN 2.2MCG + NICOTINAMIDE 18MG + CALCIUM THENATE 5MG"],
+["053","Tablets","PANTOZIYA-40","PANTAPRAZOLE 40 MG TABLET 10x1 ALU"],
+["054","Tablets","PANTOZIYA-D","PANTAPRAZOLE 40 MG+DOMPERIDONE 30 MG TABLET 10x1 ALU"],
+["055","Tablets","PHYTONEM- 300 ER","FAROPENEM SODIUM (ER) 300 MG TABLET 10x1"],
+["056","Tablets","QVKNAC-A TAB.","TRYPSIN B.P. 48MG + BROMELAIN 90MG + RUTOSIDE 10x1 DRATE ALU"],
+["057","Tablets","QVKCAN - 150","FLUCONAZOLE 150MG TABLET. 20x1 BLI"],
+["058","Tablets","QVKCAN - 200","FLUCONAZOLE 200MG TABLET. 20x B"],
+["059","Tablets","QVKJOINT-DM","DIACEREIN IP 50MG, GLUCOSAMINE SULPHATE SODIUM CHLORIDE IP 750MG , 10x OSAMINE 471MG AND METHYL SULPHONYL METHANE USP A G."],
+["060","Tablets","RAYBILAST-M","BILASTINE 20MG & MONTELUKAST SODIUM 10MG TABLETS 10x1 AL"],
+["061","Tablets","RAFATOS-400","RIFAXIMIN 400MG 10x1 AL"],
+["062","Tablets","SPASOTIL","MEFENAMIC ACID 250MG & DICYCLOMINE 20MG TABLET 10x1 BL"],
+["063","Tablets","STILHEAL-AP","TRYPSIN CHYMOTRYPSIN 50000 AU. , ACECLOFENAC 100MG 10x1 ARACETAMOL 325MG TABLET BL"],
+["064","Tablets","STILMONT-3D","ACEBROPHYLLINE 200MG(SR) MONTELUKAST SODIUM 10MG & 10x1 ORATADINE 5MG TABLETS AL"],
+["065","Tablets","STILMONT-FX","MONTELUKAST SODIUM 10MG & FEXOFENADINE HYDROCHLORIDE 120MG 10x1 ET AL"],
+["066","Tablets","SOMPRAWIN -40","ESOMEPRAZOLE 40MG TABLET 10x1 AL"],
+["067","Tablets","TIVOZ-5","LEVOCETRIZINE HCL 5MG TABLET 10x1 AL"],
+["068","Tablets","TIVOZ-10","LEVOCETRIZINE HCL 10MG TABLET 10x1 AL"],
+["069","Tablets","TIVOZ-M KID","LEVOCETIRIZINE DIHYDROCLORIDE & MONTELUKAST SODIUM DISPERSIBLE 10x1 AL"],
+["070","Tablets","TIVOZ-M","LEVOCETRIZINE HCL 5MG + MONTELUKAST 10MG TABLET 10x1 AL"],
+["071","Tablets","TIVOZ-M","LEVOCETRIZINE HCL 5MG + MONTELUKAST 10MG TABLET 10x1 AL"],
+["072","Tablets","TILGEST-SR 300","NATURAL MICRONISED PROGESTERONE 300 MG SUSTAINED RELEASE 10x1 ETS BL"],
+["073","Tablets","TMLOPIZ-40","TELMISARTAN 40MG TABLET 10x1 AL"],
+["074","Tablets","TMLOPIZ-H","TELMISARTAN 40MG + HYDROCHLOROTHIAZIDE 12.5 MG 10x1 ET AL"],
+["075","Tablets","TMLOPIZ-AM","TELMISARTAN 40MG + AMLODIPINE BESYLATE IP 5MG TABLET 10x1 AL"],
+["076","Tablets","TERSTIX","TERBINAFINE 250MG. 10x7 BL"],
+["077","Tablets","URSOWAY-150","URSODEOXYCHOLIC ACID I.P. 150MG. 10x1 BL"],
+["078","Tablets","URSOWAY-300","URSODEOXYCHOLIC ACID I.P. 300MG. 10x1 BL"],
+["079","Tablets","URSOWAY-300","URSODEOXYCHOLIC ACID I.P. 300MG. 10x1 AL"],
+["080","Tablets","VYACE-P","ACECLOFENAC 100MG +PARACETAMOL 325MG TABLET 10x1 AL"],
+["081","Tablets","VYACE-P","ACECLOFENAC 100MG +PARACETAMOL 325MG TABLET 10x1 BL"],
+["082","Tablets","VYACE-SP","ACECLOFENAC 100MG +PARACETAMOL 325MG + SERRATIOPEPTIDASE 15MG 10x1 ET AL"],
+["083","Tablets","VYACE-MR","ACECLOFENAC 100MG +PARACETAMOL 325MG + CHLORZOXAZONE 250MG 10x1 ET AL"],
+["084","Tablets","VYACE-TZ","ACECLOFENAC 100MG +TIZANIDINE 2MG TABLET 10x1 AL"],
+["085","Tablets","VYACE-COLD","ACECLOFENAC 100MG +PARACETAMOL 325MG+PHENYLEPHRINE 10x1 OCHLORIDE 5MG + CETIRIZINE HYDROCHLORIDE10MG + CEFIEINE BL OCHLORIDE 25 MG TABLET"],
+["086","Tablets","VYACE-TH4","ACECLOFENAC 100MG +THIOCOLCHICOSIDE 4MG 10x1 ET AL"],
+["087","Tablets","VYACE-TH4 MAX","ACECLOFENAC 100MG +PARACETAMOL 325MG + THIOCOLCHICOSIDE 4MG 10x1 ET AL"],
+["088","Tablets","VERCYST-16","BETAHISTINE 16 MG TABLET 10x1 AL"],
+["089","Tablets","WAYFIZ-30","DEFLAZACORT 30MG TABLET 10x1 AL"],
+["090","Tablets","WAYFIZ-6","DEFLAZACORT 6MG TABLET 10"],
+["091","Tablets","WAYFER-XT","FERROUS BISGLYCINATE 100MG + ZINC 12MG + FOLIC ACID 500MCG & 10 TAMIN B12 2.2 MCG TABLET"],
+["092","Tablets","ZYGRA-100","SILDENAFIL 100MG CITRATE TABLETS IP 10"],
+["093","Tablets","ZYTARAX-25","HYDROXYZINE HYDROCHLORIDE 25 MG TABLET 10"],
+["094","Tablets","ZIYANIL-650","PARACETOMOL-650 TAB 10"],
+["095","Tablets","ZIYARAB-20","RABEPRAZOLE SODIUM 20 MG TABLET 10"],
+["096","Tablets","ZIYACOF-D","DEXTROMETHORPHAN+CHLORPHENIRAMINE+MALEATE+ BROMHEXINE 10 DROCHLORIDE & GUAIPHENSIN TABLETS"],
+["097","Tablets","ZIYACEF-AZ L.B","CEFIXIME TRIHYDRATE I.P. 200MG + AZITHROMYCIN DIHYDRATE I.P. 250MG + 1 CTIC ACID BACILLUS 60MILLION SPORES"],
+["098","Tablets","ZIYACEF-100 DT","CEFIXIME 100 MG TAB 10"],
+["099","Tablets","ZIYACEF-200","CEFIXIME 200 MG TABLET 10"],
+["100","Tablets","ZIYACEF-200LB","CEFIXIME 200 MG +LATIC B TAB 10"],
+
+    ["101","Tablets","ZIYACEF-O","CEFIXIME 200MG + OFLOXACIN 200MG TABLET 10"],
+["102","Tablets","ZIYACEF-CV","CEFIXIME 200 MG & POTASSIUM CLAVULANATE 125MG 6x BLETS"],
+["103","Tablets","ZIYAPOD-200","CEFPODOXIME 200MG TABLET 10"],
+["104","Tablets","ZIYAPOD-O","CEFPODOXIME 200MG + OFLOXACIN 200MG TABLET 10"],
+["105","Tablets","ZIYAPOD-CV","CEFPODOXIME PROXETIL & POTASSIUM CLAVULANATE 6x BLETS"],
+["106","Tablets","ZIYOF-200","OFLOXACIN 200 MG. TABLET 10"],
+["107","Tablets","ZIYOF-OZ","OFLOXACIN 200 MG. & ORNIDAZOLE 500 MG TABLET 10"],
+["108","Tablets","ZIYOF-OZ","OFLOXACIN 200 MG. & ORNIDAZOLE 500 MG TABLET 10"],
+["109","Tablets","ZIYAFER-XT","FERROUS ASCORBATE 100MG + FOILC ACID 1.5MG + ZINC 10 .5MG TABLET"],
+["110","Tablets","ZIYANA-M","METFORMIN HYDROCHLORIDE 500MG + TENELIGLIPTIN 20MG TABLET"],
+["111","Tablets","ZIYANIL-SP","ACELOFENAC 100MG + PARACETAMOL 325MG + SERRATIOPEPTIDASE 15MG"],
+["112","Tablets","ZYDRA-100","SILDENAFIL CITRATE 100MG TABLETS"],
+["113","Tablets","ZYDRA-50","SILDENAFIL CITRATE 50MG TABLETS"],
+["114","Tablets","ZYDRA-T","TADALAFIL 10MG TABLETS"],
+["115","Tablets","ZYDRA-T-20","TADALAFIL 20MG TABLETS"],
+["116","Tablets","ZYDRA-FORCE","SILDENAFIL 100MG + DAPOXETINE 60MG TABLETS"],
+["117","Tablets","ZYDRA-DX","DAPOXETINE 60MG TABLETS"],
+["118","Tablets","ZYMONT-L","LEVOCETIRIZINE 5MG + MONTELUKAST 10MG TABLETS"],
+["119","Tablets","ZYMONT-FX","FEXOFENADINE 120MG + MONTELUKAST 10MG TABLETS"],
+["120","Tablets","ZYMONT-KID","MONTELUKAST 4MG + LEVOCETIRIZINE 2.5MG"],
+["121","Capsules","AZIRYL-250 CAP","AZITHROMYCIN 250MG CAPSULE"],
+["122","Capsules","AZIRYL-500 CAP","AZITHROMYCIN 500MG CAPSULE"],
+["123","Capsules","CALZIWAY-GOLD","CALCIUM CITRATE + VITAMIN D3 + MAGNESIUM + ZINC CAPSULE"],
+["124","Capsules","CARTISTING-PLUS","GLUCOSAMINE + CHONDROITIN + MSM + VITAMINS CAPSULE"],
+["125","Capsules","DIFROL-PLUS","DICLOFENAC + PARACETAMOL CAPSULE"],
+["126","Capsules","FOLGREAT","METHYLCOBALAMIN + FOLIC ACID CAPSULE"],
+["127","Capsules","MYOLACT-GOLD","MULTIVITAMIN + MINERALS + ANTIOXIDANTS CAPSULE"],
+["128","Capsules","NUROPROL-GOLD","ALPHA LIPOIC ACID + METHYLCOBALAMIN + FOLIC ACID CAPSULE"],
+["129","Capsules","NUROPROL-PG","PREGABALIN 75MG + METHYLCOBALAMIN CAPSULE"],
+["130","Capsules","OXIZIYA-GOLD","LUTEIN + ZEAXANTHIN + ASTAXANTHIN + VITAMINS CAPSULE"],
+["131","Capsules","QVKNAC-A","TRYPSIN + BROMELAIN + RUTOSIDE CAPSULE"],
+["132","Capsules","QVKCAN-150","FLUCONAZOLE 150MG CAPSULE"],
+["133","Capsules","QVKJOINT","GLUCOSAMINE + CHONDROITIN + MSM CAPSULE"],
+["134","Capsules","WAYFER-XT","FERROUS BISGLYCINATE + FOLIC ACID + ZINC CAPSULE"],
+["135","Capsules","ZYDRA-50","SILDENAFIL CITRATE 50MG CAPSULE"],
+["136","Capsules","ZIYACEF-200","CEFIXIME 200MG CAPSULE"],
+["137","Capsules","ZIYACEF-O","CEFIXIME + OFLOXACIN CAPSULE"],
+["138","Capsules","ZIYAPOD-200","CEFPODOXIME 200MG CAPSULE"],
+["139","Capsules","ZIYOF-OZ","OFLOXACIN + ORNIDAZOLE CAPSULE"],
+["140","Capsules","ZYDRA-M","SILDENAFIL + DAPOXETINE CAPSULE"],
+["141","Syrups","DIFROL-P","PARACETAMOL + DICLOFENAC SUSPENSION"],
+["142","Syrups","DROWAY","DROTAVERINE SYRUP"],
+["143","Syrups","FEXODRAL","FEXOFENADINE SUSPENSION"],
+["144","Syrups","FOLGREAT","MULTIVITAMIN + FOLIC ACID SYRUP"],
+["145","Syrups","NOSIWAY-COLD","PARACETAMOL + PHENYLEPHRINE + CETIRIZINE SYRUP"],
+["146","Syrups","NUROPROL","METHYLCOBALAMIN + FOLIC ACID SYRUP"],
+["147","Syrups","ZIYACOF-D","DEXTROMETHORPHAN + CHLORPHENIRAMINE + GUAIPHENESIN SYRUP"],
+["148","Syrups","ZIYACOF-LS","AMBROXOL + LEVOSALBUTAMOL + GUAIPHENESIN SYRUP"],
+["149","Syrups","ZIYACEF","CEFIXIME ORAL SUSPENSION"],
+["150","Syrups","ZIYAPOD","CEFPODOXIME ORAL SUSPENSION"],
+["151","Syrups","ZYTARAX","HYDROXYZINE SYRUP"],
+["152","Syrups","WAYFER","IRON + FOLIC ACID + VITAMIN B12 SYRUP"],
+["153","Syrups","HEPTOWAY","HERBAL LIVER TONIC SYRUP"],
+["154","Syrups","GASLIV-ZYME","LIVER TONIC + DIGESTIVE ENZYME SYRUP"],
+["155","Syrups","PLARIZ","HERBAL IMMUNITY SYRUP"],
+["156","Syrups","BRAIN BOOSTER","HERBAL BRAIN TONIC SYRUP"],
+["157","Dry Syrups","ZIYACEF-100","CEFIXIME 100MG DRY SYRUP"],
+["158","Dry Syrups","ZIYACEF-50","CEFIXIME 50MG DRY SYRUP"],
+["159","Dry Syrups","ZIYAPOD-50","CEFPODOXIME 50MG DRY SYRUP"],
+["160","Dry Syrups","ZIYAPOD-100","CEFPODOXIME 100MG DRY SYRUP"],
+["161","Dry Syrups","AZIRYL","AZITHROMYCIN DRY SYRUP"],
+["162","Dry Syrups","WAYFER","IRON + FOLIC ACID DRY SYRUP"],
+["163","Liquids","CALZIWAY-D3","CHOLECALCIFEROL 60000 IU ORAL SOLUTION"],
+["164","Liquids","CALZIWAY-L","CALCIUM + VITAMIN D3 + L-LYSINE LIQUID"],
+["165","Liquids","NUROPROL-L","METHYLCOBALAMIN + FOLIC ACID LIQUID"],
+["166","Liquids","WAYFER-L","IRON + FOLIC ACID + ZINC LIQUID"],
+["167","Liquids","GASLIV-ZYME","LIVER TONIC + ENZYME LIQUID"],
+["168","Liquids","HEPTOWAY","HERBAL LIVER TONIC LIQUID"],
+["169","Liquids","PLARIZ","HERBAL IMMUNITY LIQUID"],
+["170","Liquids","BRAIN BOOSTER","HERBAL BRAIN TONIC LIQUID"],
+["171","Liquids","SHEWAY","HERBAL WOMEN HEALTH TONIC"],
+["172","Liquids","IRON TONIC","HERBAL IRON TONIC"],
+["173","Liquids","LUCOPROL","HERBAL WOMEN HEALTH TONIC"],
+["174","Liquids","NUFRUZYME-H","HERBAL DIGESTIVE & LIVER TONIC"],
+["175","Liquids","PUNARNAVA","HERBAL TONIC"],
+["176","Suspensions","ZIYACEF-100","CEFIXIME 100MG SUSPENSION"],
+["177","Suspensions","ZIYACEF-200","CEFIXIME 200MG SUSPENSION"],
+["178","Suspensions","ZIYAPOD-50","CEFPODOXIME 50MG SUSPENSION"],
+["179","Suspensions","ZIYAPOD-100","CEFPODOXIME 100MG SUSPENSION"],
+["180","Suspensions","ZIYAPOD-200","CEFPODOXIME 200MG SUSPENSION"],
+["181","Suspensions","ZIYACOF","COUGH & COLD SUSPENSION"],
+["182","Suspensions","DIFROL-P","PARACETAMOL + DICLOFENAC SUSPENSION"],
+["183","Suspensions","DROWAY","DROTAVERINE SUSPENSION"],
+["184","Suspensions","FEXODRAL","FEXOFENADINE SUSPENSION"],
+["185","Suspensions","TIVOZ-M","LEVOCETIRIZINE + MONTELUKAST SUSPENSION"],
+["186","Suspensions","ZYTARAX","HYDROXYZINE SUSPENSION"],
+["187","Paediatric","ZIYACEF-P","CEFIXIME PAEDIATRIC SUSPENSION"],
+["188","Paediatric","ZIYAPOD-P","CEFPODOXIME PAEDIATRIC SUSPENSION"],
+["189","Paediatric","AZIRYL-P","AZITHROMYCIN PAEDIATRIC SUSPENSION"],
+["190","Paediatric","TIVOZ-M KID","LEVOCETIRIZINE + MONTELUKAST PAEDIATRIC"],
+["191","Paediatric","NOSIWAY-P","PAEDIATRIC COLD SUSPENSION"],
+["192","Paediatric","ZIYANIL-P","PARACETAMOL PAEDIATRIC SUSPENSION"],
+["193","Paediatric","WAYFER-P","IRON + FOLIC ACID PAEDIATRIC SYRUP"],
+["194","Paediatric","CALZIWAY-P","CALCIUM + VITAMIN D3 PAEDIATRIC SUSPENSION"],
+["195","Paediatric","NUROPROL-P","METHYLCOBALAMIN PAEDIATRIC DROPS"],
+["196","Paediatric","DROWAY-P","DROTAVERINE PAEDIATRIC SYRUP"],
+["197","Injectables","DIFROL-INJ","DICLOFENAC SODIUM INJECTION"],
+["198","Injectables","DIFROL-SP INJ","DICLOFENAC + SERRATIOPEPTIDASE INJECTION"],
+["199","Injectables","ZIYANIL-INJ","PARACETAMOL INJECTION"],
+["200","Injectables","ZIYACEF-INJ","CEFIXIME INJECTION"],
+["201","Injectables","ZIYAPOD-INJ","CEFPODOXIME INJECTION"],
+["202","Injectables","ZIYAMOX-INJ","MOXIFLOXACIN INJECTION"],
+["203","Injectables","NUROPROL-INJ","METHYLCOBALAMIN INJECTION"],
+["204","Injectables","CALZIWAY-INJ","CALCIUM GLUCONATE INJECTION"],
+["205","Injectables","WAYFER-INJ","IRON SUCROSE INJECTION"],
+["206","Injectables","AMIKAK-100","AMIKACIN 100MG INJECTION"],
+["207","Injectables","AMIKAK-250","AMIKACIN 250MG INJECTION"],
+["208","Injectables","AMIKAK-500","AMIKACIN 500MG INJECTION"],
+["209","Injectables","CEFTRIWAY-1G","CEFTRIAXONE 1GM INJECTION"],
+["210","Injectables","CEFTRIWAY-500","CEFTRIAXONE 500MG INJECTION"],
+["211","Injectables","CEFTRIWAY-S","CEFTRIAXONE + SULBACTAM INJECTION"],
+["212","Injectables","PANTOWAY-INJ","PANTOPRAZOLE INJECTION"],
+["213","Injectables","ONDOWAY","ONDANSETRON INJECTION"],
+["214","Injectables","DEXAWAY","DEXAMETHASONE INJECTION"],
+["215","Injectables","METHYLWAY","METHYLPREDNISOLONE INJECTION"],
+["216","Injectables","VITAMIN-B12","METHYLCOBALAMIN INJECTION"],
+["217","Infusions","ZIYACEF-IV","CEFTRIAXONE IV INFUSION"],
+["218","Infusions","WAYFER-IV","IRON SUCROSE IV INFUSION"],
+["219","Infusions","PANTOWAY-IV","PANTOPRAZOLE IV INFUSION"],
+["220","Infusions","ZIYANIL-IV","PARACETAMOL IV INFUSION"],
+["221","Infusions","ZIYAMOX-IV","MOXIFLOXACIN IV INFUSION"],
+["222","Infusions","ONDOWAY-IV","ONDANSETRON IV INFUSION"],
+["223","Powders","ZIYACEF-DRY","CEFIXIME DRY POWDER"],
+["224","Powders","ZIYAPOD-DRY","CEFPODOXIME DRY POWDER"],
+["225","Powders","AZIRYL-DRY","AZITHROMYCIN DRY POWDER"],
+["226","Powders","CALZIWAY","CALCIUM POWDER"],
+["227","Powders","WAYFER","IRON POWDER"],
+["228","Powders","PROZIYANA","PROTEIN POWDER"],
+["229","Powders","WAYFER-PRO","PROTEIN + MULTIVITAMIN POWDER"],
+["230","Powders","ZIYASIP","INSTANT ENERGY POWDER"],
+["231","Powders","ZIYANA ORS","ORAL REHYDRATION SALT POWDER"],
+["232","Powders","RG-GREAT","L-ARGININE + DHA POWDER"],
+["233","Powders","CITRYL-PRO","PROBIOTIC + CRANBERRY POWDER"],
+["234","Powders","QVKLAC-R","PROBIOTIC POWDER"],
+["235","Powders","ZYDRA-SURE","MOISTURIZING LOTION POWDER"],
+["236","Powders","AMIKAK-100","AMIKACIN 100MG POWDER"],
+["237","Powders","AMIKAK-250","AMIKACIN 250MG POWDER"],
+["238","Powders","AMIKAK-500","AMIKACIN 500MG POWDER"],
+["239","Powders","WAYFER-PRO","PROTEIN POWDER WITH MULTIVITAMINS & MULTIMINERALS WITH DHA"],
+["240","Powders","PROZIYANA","ENRICHED WITH PROTEIN, VITAMINS, MINERALS & DHA"],
+["241","Powders","ZIYANA ORS","ORAL REHYDRATION SALT SUGAR FREE ORANGE FLAVOUR"],
+["242","Powders","ZIYASIP","INSTANT ENERGY DRINK WITH VITAMIN C & ZINC ORANGE FLAVOUR"],
+["243","Powders","CALZIWAY-NANO","CHOLECALCIFEROL ORAL POWDER"],
+["244","Powders","NUROPROL","MULTIVITAMIN POWDER"],
+["245","Ointments","DIFROL GEL","DICLOFENAC GEL"],
+["246","Ointments","DIFROL-MR GEL","DICLOFENAC DIETHYLAMINE + METHYL SALICYLATE GEL"],
+["247","Ointments","MUPRIV","MUPIROCIN OINTMENT IP"],
+["248","Ointments","MEMONTA-T","MOMETASONE FUROATE WITH TERBINAFINE CREAM"],
+["249","Ointments","NEXPODINE-MS","POVIDONE IODINE + METRONIDAZOLE + SUCRALFATE"],
+["250","Paediatric","MG SUSPENTION","PAEDIATRIC SUSPENSION"],
+["251","Gargle","NEXPODINE-GARGEL","POVIDONE IODINE IP 2% W/V GERMICIDE GARGLE"],
+["252","Herbal","BRAIN BOOSTER","SHANKHPUSHPI + BRAHMI + ASHWAGANDHA + KUSTA + VACHA + SARPAGANDHA + TRIPHALA + CHANDRODAYA HERBAL SYRUP"],
+["253","Herbal","DIFROL OIL","AYURVEDIC PAIN RELIEF OIL"],
+["254","Herbal","DIFROL H","AYURVEDIC PAIN RELIEF OIL"],
+["255","Herbal","DIFROL PLUS OIL","GANDHAPURA OIL, KARPURA EXTRACT, PUDINA EXTRACT, EUCALYPTUS OIL, CLOVE OIL, THYMOL"],
+["256","Herbal","PLARIZ","GILOY EXTRACT + CARICA PAPAYA EXTRACT + GOAT MILK POWDER + VITAMIN E + TULSI"],
+["257","Herbal","SILSTONE CAPSULE ST","FOR THE TREATMENT OF URINARY TRACT INFECTIONS & KIDNEY STONES"],
+["258","Herbal","SILSTONE SYRUP","FOR THE TREATMENT OF URINARY TRACT INFECTIONS & KIDNEY STONES"],
+["259","Herbal","GASTROWAY TAB.","HARAD + DALCHINI + SOUNTH + VAVIDANG + PUDINA + KALI MIRCH + HING + AJWAIN"],
+["260","Herbal","GASLIV-ZYME","LIVER TONIC + ENZYME + ANTACID SYRUP"],
+["261","Herbal","GASLIVZYME-4G","LIVER TONIC + ENZYME + ANTACID SYRUP + ALKALIZER"],
+["262","Herbal","GASLIV-ZYME-5G","LIVER TONIC + ENZYME + ANTACID SYRUP + ALKALIZER + APPETIZER"],
+["263","Herbal","PLARIZ SYRUP","PAPAYA + MANDUKAPARANI + ALOEVERA + AMLA + HARITAKI + GILOY + DANAMETHI + PUNARNAVA"],
+["264","Herbal","HEPTOWAY","HERBAL LIVER TONIC"],
+["265","Herbal","HEPTOWAY CAPSULE 50","KUTKI + SARPANKHA + DARUHALDI + KALMEGH"],
+["266","Herbal","IRON TONIC","ASHWAGANDHA + AMLA + PUNARNAVA + KUTKI + ARJUN CHHAL + SHATAVARI SYRUP"],
+["267","Herbal","NUFRUZYME-H","AMALAKI + HARITAKI + BAHERA + KALMEGH + BHRINGRAJ + PUDINA + CARICA PAPAYA + ASHWAGANDHA + ARJUNA + GILOY + HERBAL LIVER TONIC"],
+["268","Herbal","LUCOPROL","ASHOKA + LODHRA + DHAKATI PUSHPA + AMLA + BIBHITAKI + HARITAKI + SUNTHI + MUSTA + CHANDAN + DARUHARIDRA HERBAL SYRUP"],
+["269","Herbal","RELE GOLD CAPSULES 25","JAIPHAL + GOKHRU + SAFED MUSLI + KOKILAKSHA + KESAR + ASHWAGANDHA + SHILAJIT + TRIVANG BHASMA"],
+["270","Herbal","SHEWAY","ASHOKA + ASHWAGANDHA + SHATAVARI + MAJUPHAL + HARAD + BEHRA + AMLA + BALA + DARUHARIDRA"],
+["271","Herbal","SHEWAY PLUS","ASHOKA + LODHRA + DHAKATI PUSHPA + AMLA + VIBHEETAKI + HARITAKI + SUNTHI + MUSTAKA + CHANDAN + DARUHARIDRA"],
+["272","Herbal","SHILAJEET","SHATAVARI + ASHWAGANDHA + VARAHI KAND + GORAKHMUNDI + SWARNA VANG + ABHRAK BHASMA + SHILAJIT"],
+["273","Herbal","WAYFER SYP.","ASHWAGANDHA + DRAKSH + SHATAVARI + PUNARNAVA + VIDARI KAND + BHRINGRAJ + KAUNCH + AMLA + GUDUCHI + METHI"],
+["274","Herbal","WAYFER PURE CAP.","NEEM + ANANTMOOL + MANJISTHA + HALDI + TULSI + VASAKA + BHRINGRAJ + KUTKI + GULAB"],
+["275","Herbal","ZIYACOF-H SYP","HERBAL COUGH SYRUP WITH HONEY, VASAKA, SONTH & MULETHI 100ML"],
+["276","Herbal","ZYANORM","FORTIFIED WITH ARSHOGHNI VATI + KANKAYAN VATI + VIDANG + HARDA + NAGKESHER + NEEMBEEJ"],
+["277","Sprays","DIFROL-SPRAY","WINTERGREEN OIL + PUDINA + EUCALYPTUS + LINSEED OIL + CAMPHOR + TURPENTINE OIL + CLOVE OIL + THYMOL"],
+["278","Nasal Sprays","NOSIWAY-S DROP","SODIUM CHLORIDE NASAL SPRAY 20ML"],
+["279","Nasal Sprays","NOSIWAY","OXYMETAZOLINE HYDROCHLORIDE NASAL SOLUTION IP 10ML"],
+["280","Eye Drops","NEPAWAY EYE DROP","NEPAFENAC 0.1% + BENZALKONIUM CHLORIDE 5ML"],
+["281","Eye Drops","OTO-NILWAX","BENZOCAINE + CHLORBUTOL + TURPENTINE OIL + PARA DICHLOROBENZENE EAR DROPS 10ML"],
+["282","Eye Drops","POLZOWAX-EAR T","PARADICHLOROBENZENE + BENZOCAINE + CHLORBUTOL 10ML"],
+["283","Eye Drops","ZIYAMOX EYE DROPS","MOXIFLOXACIN EYE DROPS IP 5ML"],
+["284","Eye Drops","ZIYAMOX-D EYE S","MOXIFLOXACIN + DEXAMETHASONE WITH HPMC OPHTHALMIC 5ML"],
+["285","Eye Drops","ZIYAMOX-PD","MOXIFLOXACIN 0.5% + PREDNISOLONE ACETATE IP 1% + BENZALKONIUM CHLORIDE 5ML"],
+["286","Eye Drops","ZIYAMOX-KT","MOXIFLOXACIN 0.5% + KETOROLAC TROMETHAMINE 0.5% 5ML"],
+["287","Eye Drops","ZIYAPAT EYE","OLOPATADINE 0.2% + HYDROXYPROPYL METHYL CELLULOSE 0.25% 5ML"],
+["288","Eye Drops","RYLFRESH EYE DROPS","CARBOXYMETHYL CELLULOSE SODIUM EYE DROPS IP 10ML"],
+["289","Eye Drops","TOBGYN-M EYE","MOXIFLOXACIN & TOBRAMYCIN OPHTHALMIC SOLUTION 5ML"],
+["290","Dental","SENSONOLL","POTASSIUM NITRATE + SODIUM MONOFLUOROPHOSPHATE + TRICLOSAN TOOTHPASTE 50GM"],
+["291","Dental","RELEFRESH","CHLORHEXIDINE MOUTHWASH IP 0.2% 100ML"],
+["292","Derma","KETODRAL SHAMPOO","KETOCONAZOLE & ZINC PYRITHIONE ANTI DANDRUFF TOPICAL SOLUTION"],
+["293","Derma","KETODRAL SOAP","KETOCONAZOLE SOAP 2%"],
+["294","Derma","LITRODERM-OZ","OFLOXACIN 0.75% + ORNIDAZOLE 2% + ITRACONAZOLE 1% + LOBETASOL 0.05%"],
+["295","Derma","LULITOX","LULICONAZOLE 1% W/W CREAM"],
+["296","Derma","LITROWAY","ITRACONAZOLE DUSTING POWDER 1% W/W"],
+["297","Derma","TOXIDERM-NM","CLOBETASOL PROPIONATE + NEOMYCIN SULPHATE + MICONAZOLE NITRATE + CHLOROCRESOL"],
+["298","Derma","TOXIDERM-K6","KETOCONAZOLE + CLOBETASOL PROPIONATE + NEOMYCIN + TOLNAFTATE + IODOCHLORHYDROXYQUINOLINE + DEXPANTHENOL CREAM"],
+["299","Derma","ZIYAGLOW","HYDROQUINONE 2% + TRETINOIN 0.025% + MOMETASONE FUROATE 0.1%"],
+["300","Derma","INTIWAY WASH","FEMININE HYGIENE WASH"],
+["301","Derma","PERIMETH-LOTiON","PERMETHRIN & CETRIMIDE LOTION"],
+["302","Derma","PERIMETH-SOAP","PERMETHRIN SOAP 1% W/W"],
+["303","Nano Shot","CALZIWAY-NANO","CHOLECALCIFEROL ORAL SOLUTION 60000 IU NANO SHOT"],
+["304","Sachets","RG-GREAT","L-ARGININE 3GM,DHA 5MG,PROANTHOCYANIDIN 75MG, PYRIDOXINE 3GM & FOLIC ACID 0.5MG SACHET"],
+["305","Sachets","CITRYL-PRO","LB.REUTERII 2.5 BILLION, LB.RHAMNOSUS 2.5 BILLION, CRANBERRY 300MG, D-MANNOSE 600MG, HIBISCUS EXTRACT 100MG SACHETS"],
+["306","Sachets","QVKLAC-R","LYOPHILIZED SACCHAROMYCES BOULARDII 2.5 BILLION, LACTIC ACID BACILLUS & RACECADOTRIL 10MG"],
+["307","Sachets","ZYDRA-SURE IN ,","UNIQUE COMBINATION WITH SHEA BUTTER, ALMOND OIL & CERAMIDES 1,3 OISTURIZING LOTION"]
+];
+
+const list=document.getElementById('productList'),
+filter=document.getElementById('filter'),
+search=document.getElementById('search'),
+count=document.getElementById('count'),
+empty=document.getElementById('empty');
+
+products.forEach(([n,c,name,d])=>{
+const a=document.createElement('article');
+a.className='product-card';
+a.dataset.category=c;
+a.dataset.search=(name+' '+d+' '+c).toLowerCase();
+
+a.innerHTML=`
+<div class="product-top">
+<span class="product-no">${n}</span>
+<span class="category">${c}</span>
+</div>
+<h3>${name}</h3>
+<p>${d}</p>
+`;
+
+list.appendChild(a);
+});
+
+[...new Set(products.map(p=>p[1]))].sort().forEach(c=>{
+const o=document.createElement('option');
+o.value=c;
+o.textContent=c;
+filter.appendChild(o);
+});
+
+function apply(){
+const q=search.value.toLowerCase().trim();
+const cat=filter.value;
+let n=0;
+
+list.querySelectorAll('.product-card').forEach(c=>{
+const ok=
+(cat==='all'||c.dataset.category===cat)&&
+(!q||c.dataset.search.includes(q));
+
+c.style.display=ok?'block':'none';
+
+if(ok)n++;
+});
+
+count.textContent=n;
+empty.style.display=n?'none':'block';
+}
+
+search.addEventListener('input',apply);
+filter.addEventListener('change',apply);
+apply();
+</script>
 
 </body>
 </html>
