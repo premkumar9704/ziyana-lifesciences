@@ -11,32 +11,20 @@
 <meta name="author" content="Ziyana Lifesciences Private Limited">
 
 <style>
-
-/* =========================================================
-   ZIYANA LIFESCIENCES
-   PREMIUM CORPORATE WEBSITE
-   ========================================================= */
-
 :root{
     --primary:#087f79;
     --primary-dark:#05645f;
     --secondary:#0d344c;
     --secondary-dark:#09283a;
     --accent:#19b8aa;
-
     --text:#17324d;
     --muted:#60788b;
-
     --bg:#f5f9fc;
     --white:#ffffff;
     --border:#dce8ef;
-
     --shadow-sm:0 5px 20px rgba(13,52,76,.07);
     --shadow-md:0 12px 35px rgba(13,52,76,.11);
     --shadow-lg:0 25px 60px rgba(13,52,76,.15);
-
-    --radius:18px;
-
     --header-height:78px;
 }
 
@@ -52,15 +40,7 @@ html{
 }
 
 body{
-    font-family:
-        Inter,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;
     background:var(--bg);
     color:var(--text);
     line-height:1.7;
@@ -73,25 +53,16 @@ body.dark{
     --text:#e8f5f7;
     --muted:#a9c0c8;
     --border:#1c3b47;
-
     --shadow-sm:0 5px 20px rgba(0,0,0,.25);
     --shadow-md:0 12px 35px rgba(0,0,0,.35);
     --shadow-lg:0 25px 60px rgba(0,0,0,.45);
-}
-
-img{
-    max-width:100%;
-    display:block;
 }
 
 a{
     color:inherit;
 }
 
-button,
-input,
-textarea,
-select{
+button,input,textarea,select{
     font:inherit;
 }
 
@@ -99,9 +70,7 @@ button{
     cursor:pointer;
 }
 
-/* =========================================================
-   TOP BAR
-   ========================================================= */
+/* TOP BAR */
 
 .top-bar{
     background:var(--secondary-dark);
@@ -114,15 +83,13 @@ button{
     margin:auto;
     min-height:38px;
     padding:7px 24px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:20px;
 }
 
-.top-left,
-.top-right{
+.top-left,.top-right{
     display:flex;
     align-items:center;
     gap:18px;
@@ -132,71 +99,42 @@ button{
     text-decoration:none;
 }
 
-.top-bar a:hover{
-    color:#8de4dc;
-}
-
-/* =========================================================
-   HEADER
-   ========================================================= */
+/* HEADER */
 
 header{
     position:sticky;
     top:0;
     z-index:2000;
-
     background:rgba(255,255,255,.94);
     backdrop-filter:blur(14px);
-
     border-bottom:1px solid rgba(220,232,239,.8);
-
-    transition:.3s ease;
 }
 
 body.dark header{
     background:rgba(7,24,32,.94);
 }
 
-header.scrolled{
-    box-shadow:0 8px 30px rgba(13,52,76,.12);
-}
-
 .navbar{
     max-width:1280px;
     min-height:var(--header-height);
-
     margin:auto;
     padding:10px 24px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
     gap:25px;
 }
 
-/* =========================================================
-   LOGO
-   ========================================================= */
-
 .brand{
     display:flex;
     align-items:center;
     gap:12px;
-
     text-decoration:none;
     min-width:230px;
 }
 
-.logo{
-    width:auto;
-    height:55px;
-    max-width:250px;
-    object-fit:contain;
-}
-
 .logo-fallback{
-    display:none;
-
+    display:flex;
     align-items:center;
     gap:10px;
 }
@@ -205,17 +143,12 @@ header.scrolled{
     width:44px;
     height:44px;
     border-radius:13px;
-
     display:grid;
     place-items:center;
-
     background:linear-gradient(135deg,var(--primary),var(--accent));
     color:white;
-
     font-weight:900;
     font-size:20px;
-
-    box-shadow:0 8px 20px rgba(8,127,121,.25);
 }
 
 .logo-text strong{
@@ -233,10 +166,6 @@ header.scrolled{
     text-transform:uppercase;
 }
 
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
 .nav-links{
     display:flex;
     align-items:center;
@@ -245,19 +174,12 @@ header.scrolled{
 }
 
 .nav-links a{
-    position:relative;
-
     padding:10px 13px;
-
     color:var(--text);
     text-decoration:none;
-
     font-size:14px;
     font-weight:700;
-
     border-radius:9px;
-
-    transition:.25s ease;
 }
 
 .nav-links a:hover,
@@ -265,33 +187,6 @@ header.scrolled{
     color:var(--primary);
     background:rgba(8,127,121,.07);
 }
-
-.nav-links a::after{
-    content:"";
-
-    position:absolute;
-    left:13px;
-    right:13px;
-    bottom:5px;
-
-    height:2px;
-
-    background:var(--primary);
-
-    transform:scaleX(0);
-    transform-origin:center;
-
-    transition:.25s ease;
-}
-
-.nav-links a:hover::after,
-.nav-links a.active::after{
-    transform:scaleX(1);
-}
-
-/* =========================================================
-   HEADER ACTIONS
-   ========================================================= */
 
 .header-actions{
     display:flex;
@@ -302,68 +197,41 @@ header.scrolled{
 .icon-btn{
     width:42px;
     height:42px;
-
     border:1px solid var(--border);
     background:var(--white);
-
     color:var(--text);
-
     border-radius:11px;
-
     display:grid;
     place-items:center;
-
     font-size:18px;
-
-    transition:.25s ease;
-}
-
-.icon-btn:hover{
-    border-color:var(--primary);
-    color:var(--primary);
-    transform:translateY(-2px);
 }
 
 .menu-btn{
     display:none;
 }
 
-/* =========================================================
-   HERO
-   ========================================================= */
+/* HERO */
 
 .hero{
     position:relative;
     min-height:690px;
-
     display:flex;
     align-items:center;
-
     overflow:hidden;
-
     background:
         radial-gradient(circle at 85% 20%,rgba(25,184,170,.18),transparent 30%),
         radial-gradient(circle at 10% 80%,rgba(8,127,121,.12),transparent 28%),
         linear-gradient(135deg,#effcfb 0%,#f3f8ff 55%,#ffffff 100%);
 }
 
-body.dark .hero{
-    background:
-        radial-gradient(circle at 85% 20%,rgba(25,184,170,.12),transparent 30%),
-        linear-gradient(135deg,#071c25,#092532);
-}
-
 .hero-grid{
     max-width:1280px;
     width:100%;
-
     margin:auto;
     padding:90px 24px;
-
     display:grid;
     grid-template-columns:1.15fr .85fr;
     align-items:center;
-
     gap:70px;
 }
 
@@ -376,25 +244,14 @@ body.dark .hero{
     display:inline-flex;
     align-items:center;
     gap:8px;
-
     padding:8px 14px;
-
     border:1px solid rgba(8,127,121,.2);
     background:rgba(255,255,255,.7);
-
     color:var(--primary);
-
     border-radius:100px;
-
     font-size:13px;
     font-weight:800;
-    letter-spacing:.4px;
-
     margin-bottom:22px;
-}
-
-body.dark .hero-badge{
-    background:rgba(255,255,255,.05);
 }
 
 .status-dot{
@@ -402,22 +259,14 @@ body.dark .hero-badge{
     height:8px;
     border-radius:50%;
     background:#19b8aa;
-    box-shadow:0 0 0 5px rgba(25,184,170,.12);
 }
 
 .hero h1{
     font-size:clamp(43px,6vw,76px);
     line-height:1.04;
-
     letter-spacing:-2.5px;
-
     color:var(--secondary);
-
     margin-bottom:22px;
-}
-
-body.dark .hero h1{
-    color:#f1ffff;
 }
 
 .hero h1 span{
@@ -426,11 +275,8 @@ body.dark .hero h1{
 
 .hero-description{
     max-width:700px;
-
     font-size:clamp(17px,2vw,21px);
-
     color:var(--muted);
-
     margin-bottom:32px;
 }
 
@@ -445,33 +291,18 @@ body.dark .hero h1{
     align-items:center;
     justify-content:center;
     gap:9px;
-
     min-height:50px;
-
     padding:13px 23px;
-
     border-radius:10px;
-
     text-decoration:none;
-
     font-weight:800;
     font-size:14px;
-
-    transition:.3s ease;
-
     border:1px solid transparent;
 }
 
 .btn-primary{
     background:linear-gradient(135deg,var(--primary),#0a9d94);
     color:#fff;
-
-    box-shadow:0 10px 25px rgba(8,127,121,.22);
-}
-
-.btn-primary:hover{
-    transform:translateY(-3px);
-    box-shadow:0 15px 30px rgba(8,127,121,.30);
 }
 
 .btn-outline{
@@ -480,18 +311,11 @@ body.dark .hero h1{
     background:var(--white);
 }
 
-.btn-outline:hover{
-    border-color:var(--primary);
-    color:var(--primary);
-    transform:translateY(-3px);
-}
-
-/* Hero visual */
+/* HERO VISUAL */
 
 .hero-visual{
     position:relative;
     min-height:440px;
-
     display:grid;
     place-items:center;
 }
@@ -499,38 +323,22 @@ body.dark .hero h1{
 .medical-orbit{
     width:min(410px,90vw);
     aspect-ratio:1;
-
     border-radius:50%;
-
     border:1px solid rgba(8,127,121,.18);
-
     background:
         radial-gradient(circle,#ffffff 0 35%,rgba(25,184,170,.08) 36% 58%,transparent 59%),
         linear-gradient(135deg,rgba(255,255,255,.85),rgba(220,248,245,.6));
-
-    box-shadow:
-        0 35px 80px rgba(13,52,76,.15),
-        inset 0 0 60px rgba(8,127,121,.08);
-
+    box-shadow:0 35px 80px rgba(13,52,76,.15);
     display:grid;
     place-items:center;
-
     position:relative;
-}
-
-body.dark .medical-orbit{
-    background:
-        radial-gradient(circle,#0e2e3a 0 35%,rgba(25,184,170,.08) 36% 58%,transparent 59%),
-        linear-gradient(135deg,#0e2c37,#09232d);
 }
 
 .orbit-ring{
     position:absolute;
     inset:35px;
-
     border:1px dashed rgba(8,127,121,.35);
     border-radius:50%;
-
     animation:spin 25s linear infinite;
 }
 
@@ -543,52 +351,30 @@ body.dark .medical-orbit{
 .medical-cross{
     width:115px;
     height:115px;
-
     border-radius:30px;
-
     background:linear-gradient(135deg,var(--primary),var(--accent));
-
     box-shadow:0 25px 50px rgba(8,127,121,.25);
-
     display:grid;
     place-items:center;
-
     color:#fff;
     font-size:65px;
-    font-weight:300;
-
     position:relative;
     z-index:2;
 }
 
 .floating-card{
     position:absolute;
-
     padding:15px 18px;
-
     border-radius:15px;
-
     background:rgba(255,255,255,.9);
-    backdrop-filter:blur(10px);
-
     box-shadow:var(--shadow-md);
-
     border:1px solid rgba(255,255,255,.8);
-
     display:flex;
     align-items:center;
     gap:12px;
-
     font-size:13px;
     font-weight:800;
-
     color:var(--secondary);
-}
-
-body.dark .floating-card{
-    background:rgba(13,38,50,.9);
-    color:#e8f5f7;
-    border-color:#204552;
 }
 
 .floating-card.one{
@@ -604,46 +390,32 @@ body.dark .floating-card{
 .floating-icon{
     width:38px;
     height:38px;
-
     border-radius:10px;
-
     display:grid;
     place-items:center;
-
     background:#e8faf7;
-
     color:var(--primary);
-
-    font-size:18px;
 }
 
-/* =========================================================
-   TRUST STRIP
-   ========================================================= */
+/* TRUST */
 
 .trust-strip{
     position:relative;
     z-index:5;
-
     margin-top:-35px;
 }
 
 .trust-inner{
     max-width:1100px;
     margin:auto;
-
     padding:0 24px;
 }
 
 .trust-box{
     background:var(--white);
-
     border:1px solid var(--border);
-
     border-radius:18px;
-
     box-shadow:var(--shadow-md);
-
     display:grid;
     grid-template-columns:repeat(4,1fr);
 }
@@ -651,7 +423,6 @@ body.dark .floating-card{
 .trust-item{
     padding:25px 20px;
     text-align:center;
-
     border-right:1px solid var(--border);
 }
 
@@ -661,7 +432,6 @@ body.dark .floating-card{
 
 .trust-item strong{
     display:block;
-
     font-size:27px;
     color:var(--primary);
 }
@@ -669,12 +439,9 @@ body.dark .floating-card{
 .trust-item span{
     color:var(--muted);
     font-size:13px;
-    font-weight:600;
 }
 
-/* =========================================================
-   GENERAL SECTION
-   ========================================================= */
+/* GENERAL */
 
 section{
     padding:100px 24px;
@@ -693,32 +460,19 @@ section{
 
 .eyebrow{
     display:inline-block;
-
     color:var(--primary);
-
     text-transform:uppercase;
     letter-spacing:2px;
-
     font-size:12px;
     font-weight:900;
-
     margin-bottom:10px;
 }
 
 .section-title{
     color:var(--secondary);
-
     font-size:clamp(31px,4vw,45px);
-
     line-height:1.15;
-
-    letter-spacing:-1px;
-
     margin-bottom:14px;
-}
-
-body.dark .section-title{
-    color:#f1ffff;
 }
 
 .section-description{
@@ -726,9 +480,7 @@ body.dark .section-title{
     font-size:16px;
 }
 
-/* =========================================================
-   DIVISIONS
-   ========================================================= */
+/* DIVISIONS */
 
 .divisions-section{
     background:var(--white);
@@ -741,70 +493,29 @@ body.dark .section-title{
 }
 
 .division-card{
-    position:relative;
-
     padding:30px 18px;
-
     border:1px solid var(--border);
-
     border-radius:17px;
-
     background:var(--white);
-
     text-align:center;
-
-    transition:.3s ease;
-
-    overflow:hidden;
-}
-
-.division-card::before{
-    content:"";
-
-    position:absolute;
-
-    left:0;
-    top:0;
-
-    width:100%;
-    height:3px;
-
-    background:linear-gradient(90deg,var(--primary),var(--accent));
-
-    transform:scaleX(0);
     transition:.3s ease;
 }
 
 .division-card:hover{
     transform:translateY(-8px);
-    border-color:rgba(8,127,121,.25);
     box-shadow:var(--shadow-md);
-}
-
-.division-card:hover::before{
-    transform:scaleX(1);
 }
 
 .division-icon{
     width:62px;
     height:62px;
-
     margin:0 auto 17px;
-
     display:grid;
     place-items:center;
-
     border-radius:17px;
-
     background:#eaf9f7;
-
     color:var(--primary);
-
     font-size:26px;
-}
-
-body.dark .division-icon{
-    background:#103842;
 }
 
 .division-card h3{
@@ -818,22 +529,15 @@ body.dark .division-icon{
     font-size:12px;
 }
 
-/* =========================================================
-   PRODUCTS
-   ========================================================= */
+/* PRODUCTS */
 
 .products-section{
     background:#f2f8fb;
 }
 
-body.dark .products-section{
-    background:#081e28;
-}
-
 .product-toolbar{
     max-width:1000px;
     margin:0 auto 35px;
-
     display:grid;
     grid-template-columns:1fr auto;
     gap:12px;
@@ -848,59 +552,37 @@ body.dark .products-section{
     left:17px;
     top:50%;
     transform:translateY(-50%);
-
     color:var(--muted);
 }
 
 .search{
     width:100%;
-
     min-height:54px;
-
     padding:14px 18px 14px 48px;
-
     border:1px solid var(--border);
     border-radius:12px;
-
     background:var(--white);
-
     color:var(--text);
-
     outline:none;
-
-    transition:.25s ease;
-}
-
-.search:focus{
-    border-color:var(--primary);
-    box-shadow:0 0 0 4px rgba(8,127,121,.08);
 }
 
 .category-filter{
     min-width:190px;
-
     padding:0 15px;
-
     border:1px solid var(--border);
     border-radius:12px;
-
     background:var(--white);
     color:var(--text);
-
     outline:none;
 }
 
 .product-meta{
     max-width:1000px;
     margin:0 auto 25px;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:15px;
-
     color:var(--muted);
-
     font-size:13px;
 }
 
@@ -916,33 +598,19 @@ body.dark .products-section{
 
 .product-category{
     background:var(--white);
-
     border:1px solid var(--border);
-
     border-radius:18px;
-
     padding:25px;
-
     box-shadow:var(--shadow-sm);
-
-    transition:.3s ease;
-}
-
-.product-category:hover{
-    box-shadow:var(--shadow-md);
 }
 
 .category-header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     gap:15px;
-
     margin-bottom:18px;
-
     padding-bottom:14px;
-
     border-bottom:1px solid var(--border);
 }
 
@@ -954,65 +622,37 @@ body.dark .products-section{
 .category-count{
     min-width:34px;
     height:28px;
-
     padding:0 9px;
-
     display:grid;
     place-items:center;
-
     background:#e9f8f6;
     color:var(--primary);
-
     border-radius:100px;
-
     font-size:12px;
     font-weight:900;
-}
-
-body.dark .category-count{
-    background:#103842;
 }
 
 .product-category ol{
     margin:0;
     padding-left:27px;
-
     columns:2;
     column-gap:35px;
 }
 
 .product-category li{
     break-inside:avoid;
-
     padding:5px 3px;
-
     color:var(--text);
-
     font-size:13px;
-
-    transition:.2s ease;
-}
-
-.product-category li::marker{
-    color:var(--primary);
-    font-weight:800;
-}
-
-.product-category li:hover{
-    color:var(--primary);
 }
 
 .no-results{
     display:none;
-
     padding:50px 20px;
-
     text-align:center;
-
     background:var(--white);
     border:1px solid var(--border);
     border-radius:18px;
-
     color:var(--muted);
 }
 
@@ -1020,13 +660,7 @@ body.dark .category-count{
     display:block;
 }
 
-.hidden{
-    display:none!important;
-}
-
-/* =========================================================
-   ABOUT
-   ========================================================= */
+/* ABOUT */
 
 .about-section{
     background:var(--white);
@@ -1036,19 +670,13 @@ body.dark .category-count{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:55px;
-
     align-items:center;
 }
 
 .about-content h3{
     font-size:30px;
     color:var(--secondary);
-
     margin-bottom:18px;
-}
-
-body.dark .about-content h3{
-    color:#f1ffff;
 }
 
 .about-content p{
@@ -1060,28 +688,19 @@ body.dark .about-content h3{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:13px;
-
     margin-top:28px;
 }
 
 .about-point{
     padding:17px;
-
     background:#f2faf9;
-
     border-radius:13px;
-
     border:1px solid rgba(8,127,121,.1);
-}
-
-body.dark .about-point{
-    background:#0c2a34;
 }
 
 .about-point strong{
     display:block;
     color:var(--primary);
-    margin-bottom:3px;
 }
 
 .about-point span{
@@ -1091,71 +710,25 @@ body.dark .about-point{
 
 .about-visual{
     min-height:430px;
-
     padding:30px;
-
     border-radius:25px;
-
-    background:
-        linear-gradient(145deg,#073d50,#0b817b);
-
+    background:linear-gradient(145deg,#073d50,#0b817b);
     position:relative;
-
     overflow:hidden;
-
     box-shadow:var(--shadow-lg);
-
     color:white;
-
     display:flex;
     align-items:flex-end;
-}
-
-.about-visual::before{
-    content:"";
-
-    position:absolute;
-
-    width:300px;
-    height:300px;
-
-    border:1px solid rgba(255,255,255,.18);
-
-    border-radius:50%;
-
-    right:-80px;
-    top:-80px;
-}
-
-.about-visual::after{
-    content:"";
-
-    position:absolute;
-
-    width:200px;
-    height:200px;
-
-    border:1px solid rgba(255,255,255,.13);
-
-    border-radius:50%;
-
-    left:-70px;
-    bottom:-80px;
 }
 
 .about-panel{
     position:relative;
     z-index:2;
-
     max-width:470px;
-
     padding:25px;
-
     border-radius:18px;
-
     background:rgba(255,255,255,.1);
     backdrop-filter:blur(10px);
-
     border:1px solid rgba(255,255,255,.15);
 }
 
@@ -1169,16 +742,10 @@ body.dark .about-point{
     font-size:14px;
 }
 
-/* =========================================================
-   VALUES
-   ========================================================= */
+/* VALUES */
 
 .values-section{
     background:#f3f8fa;
-}
-
-body.dark .values-section{
-    background:#081d26;
 }
 
 .values-grid{
@@ -1189,13 +756,9 @@ body.dark .values-section{
 
 .value-card{
     padding:30px;
-
     background:var(--white);
-
     border:1px solid var(--border);
-
     border-radius:18px;
-
     transition:.3s ease;
 }
 
@@ -1206,11 +769,9 @@ body.dark .values-section{
 
 .value-number{
     color:var(--primary);
-
     font-size:12px;
     font-weight:900;
     letter-spacing:2px;
-
     margin-bottom:20px;
 }
 
@@ -1225,9 +786,7 @@ body.dark .values-section{
     font-size:14px;
 }
 
-/* =========================================================
-   QUALITY / CTA
-   ========================================================= */
+/* CTA */
 
 .cta-section{
     padding-top:75px;
@@ -1237,23 +796,16 @@ body.dark .values-section{
 .cta-box{
     max-width:1200px;
     margin:auto;
-
     padding:55px;
-
     border-radius:25px;
-
     background:
         radial-gradient(circle at 90% 10%,rgba(25,184,170,.22),transparent 25%),
         linear-gradient(135deg,#083e51,#087f79);
-
     color:white;
-
     display:flex;
     align-items:center;
     justify-content:space-between;
-
     gap:35px;
-
     box-shadow:var(--shadow-lg);
 }
 
@@ -1266,3 +818,303 @@ body.dark .values-section{
 .cta-box p{
     color:#d5eef0;
     max-width:650px;
+}
+
+.footer{
+    background:#09283a;
+    color:#d9edf2;
+    padding:50px 24px 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+.footer h3{
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer p{
+    color:#a9c8cf;
+    font-size:14px;
+}
+
+.footer a{
+    display:block;
+    text-decoration:none;
+    color:#c9e2e7;
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:35px auto 0;
+    padding-top:20px;
+    border-top:1px solid rgba(255,255,255,.12);
+    text-align:center;
+    color:#91b1b8;
+    font-size:12px;
+}
+
+@keyframes spin{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
+
+/* MOBILE */
+
+@media(max-width:1000px){
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:var(--white);
+        padding:15px 24px;
+        flex-direction:column;
+        align-items:stretch;
+        box-shadow:var(--shadow-md);
+    }
+
+    .nav-links.open{
+        display:flex;
+    }
+
+    .menu-btn{
+        display:grid;
+    }
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .hero-content{
+        text-align:center;
+    }
+
+    .hero-description{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .divisions-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+}
+
+@media(max-width:700px){
+    .top-bar-inner{
+        justify-content:center;
+    }
+
+    .top-right{
+        display:none;
+    }
+
+    .navbar{
+        padding:10px 16px;
+    }
+
+    .brand{
+        min-width:auto;
+    }
+
+    .header-actions .icon-btn:not(.menu-btn){
+        display:none;
+    }
+
+    .hero{
+        min-height:auto;
+    }
+
+    .hero-grid{
+        padding:70px 18px;
+    }
+
+    .hero h1{
+        font-size:43px;
+    }
+
+    .hero-visual{
+        min-height:350px;
+    }
+
+    .medical-orbit{
+        width:300px;
+    }
+
+    .floating-card.one{
+        right:0;
+    }
+
+    .floating-card.two{
+        left:0;
+    }
+
+    .trust-box{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .trust-item:nth-child(2){
+        border-right:0;
+    }
+
+    .trust-item:nth-child(-n+2){
+        border-bottom:1px solid var(--border);
+    }
+
+    section{
+        padding:70px 18px;
+    }
+
+    .divisions-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .product-toolbar{
+        grid-template-columns:1fr;
+    }
+
+    .product-list{
+        grid-template-columns:1fr;
+    }
+
+    .product-category ol{
+        columns:1;
+    }
+
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-points{
+        grid-template-columns:1fr;
+    }
+
+    .values-grid{
+        grid-template-columns:1fr;
+    }
+
+    .cta-box{
+        padding:35px 25px;
+        flex-direction:column;
+        align-items:flex-start;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="top-left">
+            <span>Healthcare • Quality • Trust</span>
+        </div>
+
+        <div class="top-right">
+            <a href="mailto:info@ziyanalifesciences.com">info@ziyanalifesciences.com</a>
+            <span>Pharmaceutical & Healthcare Products</span>
+        </div>
+    </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+    <nav class="navbar">
+
+        <a href="#home" class="brand">
+            <div class="logo-fallback">
+                <div class="logo-mark">Z</div>
+
+                <div class="logo-text">
+                    <strong>Ziyana Lifesciences</strong>
+                    <span>Private Limited</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="active">Home</a>
+            <a href="#divisions">Divisions</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#values">Values</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="header-actions">
+            <button class="icon-btn" id="themeBtn" title="Dark Mode">🌙</button>
+
+            <button class="icon-btn menu-btn" id="menuBtn" title="Menu">
+                ☰
+            </button>
+        </div>
+
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                <span class="status-dot"></span>
+                Trusted Healthcare Solutions
+            </div>
+
+            <h1>
+                Better Health.<br>
+                <span>Better Future.</span>
+            </h1>
+
+            <p class="hero-description">
+                Ziyana Lifesciences Private Limited is focused on delivering
+                quality pharmaceutical and healthcare products across multiple
+                therapeutic categories.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">
+                    Explore Products →
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Us
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+
+            <div class="medical-orbit">
+
+                <div class="orbit-ring"></div>
+                <div class="orbit-ring two"></div>
+
+                <div class="medical-cross">
+                    +
+                </div>
+
+                <div class="floating-card one">
+                    <div class="floating-ico
