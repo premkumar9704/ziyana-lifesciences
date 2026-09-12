@@ -4,28 +4,21 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Ziyana Lifesciences Private Limited | Healthcare & Pharmaceutical Products</title>
+<title>Ziyana Lifesciences Private Limited</title>
 
-<meta name="description" content="Ziyana Lifesciences Private Limited - Pharmaceutical and healthcare products across multiple healthcare categories.">
-<meta name="keywords" content="Ziyana Lifesciences, pharmaceutical products, healthcare products, tablets, capsules, syrups, injectables">
-<meta name="author" content="Ziyana Lifesciences Private Limited">
+<meta name="description" content="Ziyana Lifesciences Private Limited - Pharmaceutical and healthcare products.">
 
 <style>
 :root{
     --primary:#087f79;
-    --primary-dark:#05645f;
-    --secondary:#0d344c;
-    --secondary-dark:#09283a;
     --accent:#19b8aa;
+    --dark:#0d344c;
     --text:#17324d;
     --muted:#60788b;
     --bg:#f5f9fc;
     --white:#ffffff;
     --border:#dce8ef;
-    --shadow-sm:0 5px 20px rgba(13,52,76,.07);
-    --shadow-md:0 12px 35px rgba(13,52,76,.11);
-    --shadow-lg:0 25px 60px rgba(13,52,76,.15);
-    --header-height:78px;
+    --shadow:0 12px 35px rgba(13,52,76,.10);
 }
 
 *{
@@ -36,67 +29,41 @@
 
 html{
     scroll-behavior:smooth;
-    scroll-padding-top:90px;
 }
 
 body{
-    font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,Helvetica,sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
     background:var(--bg);
     color:var(--text);
-    line-height:1.7;
-    overflow-x:hidden;
-}
-
-body.dark{
-    --bg:#071820;
-    --white:#0d2632;
-    --text:#e8f5f7;
-    --muted:#a9c0c8;
-    --border:#1c3b47;
-    --shadow-sm:0 5px 20px rgba(0,0,0,.25);
-    --shadow-md:0 12px 35px rgba(0,0,0,.35);
-    --shadow-lg:0 25px 60px rgba(0,0,0,.45);
+    line-height:1.6;
 }
 
 a{
+    text-decoration:none;
     color:inherit;
 }
 
-button,input,textarea,select{
+button,
+input,
+select{
     font:inherit;
-}
-
-button{
-    cursor:pointer;
 }
 
 /* TOP BAR */
 
 .top-bar{
-    background:var(--secondary-dark);
+    background:#09283a;
     color:#d9edf2;
     font-size:13px;
 }
 
 .top-bar-inner{
-    max-width:1280px;
+    max-width:1200px;
     margin:auto;
-    min-height:38px;
-    padding:7px 24px;
+    padding:8px 20px;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:20px;
-}
-
-.top-left,.top-right{
-    display:flex;
-    align-items:center;
-    gap:18px;
-}
-
-.top-bar a{
-    text-decoration:none;
+    gap:15px;
 }
 
 /* HEADER */
@@ -104,33 +71,25 @@ button{
 header{
     position:sticky;
     top:0;
-    z-index:2000;
-    background:rgba(255,255,255,.94);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid rgba(220,232,239,.8);
-}
-
-body.dark header{
-    background:rgba(7,24,32,.94);
+    z-index:1000;
+    background:rgba(255,255,255,.96);
+    border-bottom:1px solid var(--border);
 }
 
 .navbar{
-    max-width:1280px;
-    min-height:var(--header-height);
+    max-width:1200px;
+    min-height:75px;
     margin:auto;
-    padding:10px 24px;
+    padding:10px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:25px;
+    gap:20px;
 }
 
 .brand{
     display:flex;
     align-items:center;
-    gap:12px;
-    text-decoration:none;
-    min-width:230px;
 }
 
 .logo-fallback{
@@ -140,70 +99,60 @@ body.dark header{
 }
 
 .logo-mark{
-    width:44px;
-    height:44px;
-    border-radius:13px;
+    width:45px;
+    height:45px;
+    border-radius:12px;
     display:grid;
     place-items:center;
     background:linear-gradient(135deg,var(--primary),var(--accent));
     color:white;
-    font-weight:900;
-    font-size:20px;
+    font-size:21px;
+    font-weight:bold;
 }
 
 .logo-text strong{
     display:block;
     color:var(--primary);
     font-size:17px;
-    line-height:1.1;
 }
 
 .logo-text span{
     display:block;
     color:var(--muted);
     font-size:10px;
-    letter-spacing:1.4px;
+    letter-spacing:1px;
     text-transform:uppercase;
 }
 
 .nav-links{
     display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:6px;
+    gap:5px;
 }
 
 .nav-links a{
-    padding:10px 13px;
-    color:var(--text);
-    text-decoration:none;
+    padding:10px 12px;
     font-size:14px;
-    font-weight:700;
-    border-radius:9px;
+    font-weight:bold;
+    border-radius:8px;
 }
 
-.nav-links a:hover,
-.nav-links a.active{
+.nav-links a:hover{
     color:var(--primary);
-    background:rgba(8,127,121,.07);
+    background:#eef9f8;
 }
 
 .header-actions{
     display:flex;
-    align-items:center;
     gap:8px;
 }
 
 .icon-btn{
-    width:42px;
-    height:42px;
+    width:40px;
+    height:40px;
     border:1px solid var(--border);
-    background:var(--white);
-    color:var(--text);
-    border-radius:11px;
-    display:grid;
-    place-items:center;
-    font-size:18px;
+    background:white;
+    border-radius:10px;
+    cursor:pointer;
 }
 
 .menu-btn{
@@ -213,31 +162,23 @@ body.dark header{
 /* HERO */
 
 .hero{
-    position:relative;
-    min-height:690px;
+    min-height:650px;
     display:flex;
     align-items:center;
-    overflow:hidden;
     background:
         radial-gradient(circle at 85% 20%,rgba(25,184,170,.18),transparent 30%),
-        radial-gradient(circle at 10% 80%,rgba(8,127,121,.12),transparent 28%),
-        linear-gradient(135deg,#effcfb 0%,#f3f8ff 55%,#ffffff 100%);
+        linear-gradient(135deg,#effcfb,#f3f8ff,#fff);
 }
 
 .hero-grid{
-    max-width:1280px;
+    max-width:1200px;
     width:100%;
     margin:auto;
-    padding:90px 24px;
+    padding:80px 20px;
     display:grid;
-    grid-template-columns:1.15fr .85fr;
+    grid-template-columns:1.1fr .9fr;
     align-items:center;
-    gap:70px;
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
+    gap:50px;
 }
 
 .hero-badge{
@@ -245,28 +186,27 @@ body.dark header{
     align-items:center;
     gap:8px;
     padding:8px 14px;
-    border:1px solid rgba(8,127,121,.2);
-    background:rgba(255,255,255,.7);
+    border:1px solid #bfe5e1;
+    background:white;
     color:var(--primary);
-    border-radius:100px;
+    border-radius:50px;
     font-size:13px;
-    font-weight:800;
-    margin-bottom:22px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 .status-dot{
     width:8px;
     height:8px;
     border-radius:50%;
-    background:#19b8aa;
+    background:var(--accent);
 }
 
 .hero h1{
-    font-size:clamp(43px,6vw,76px);
-    line-height:1.04;
-    letter-spacing:-2.5px;
-    color:var(--secondary);
-    margin-bottom:22px;
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.05;
+    color:var(--dark);
+    margin-bottom:20px;
 }
 
 .hero h1 span{
@@ -274,154 +214,136 @@ body.dark header{
 }
 
 .hero-description{
-    max-width:700px;
-    font-size:clamp(17px,2vw,21px);
+    max-width:650px;
     color:var(--muted);
-    margin-bottom:32px;
+    font-size:19px;
+    margin-bottom:30px;
 }
 
 .hero-buttons{
     display:flex;
+    gap:12px;
     flex-wrap:wrap;
-    gap:13px;
 }
 
 .btn{
     display:inline-flex;
     align-items:center;
     justify-content:center;
-    gap:9px;
     min-height:50px;
-    padding:13px 23px;
+    padding:12px 22px;
     border-radius:10px;
-    text-decoration:none;
-    font-weight:800;
-    font-size:14px;
-    border:1px solid transparent;
+    font-weight:bold;
 }
 
 .btn-primary{
     background:linear-gradient(135deg,var(--primary),#0a9d94);
-    color:#fff;
+    color:white;
 }
 
 .btn-outline{
-    border-color:var(--border);
-    color:var(--text);
-    background:var(--white);
+    border:1px solid var(--border);
+    background:white;
 }
 
-/* HERO VISUAL */
-
 .hero-visual{
-    position:relative;
-    min-height:440px;
+    min-height:400px;
     display:grid;
     place-items:center;
 }
 
 .medical-orbit{
-    width:min(410px,90vw);
-    aspect-ratio:1;
+    width:380px;
+    height:380px;
+    max-width:90vw;
     border-radius:50%;
-    border:1px solid rgba(8,127,121,.18);
-    background:
-        radial-gradient(circle,#ffffff 0 35%,rgba(25,184,170,.08) 36% 58%,transparent 59%),
-        linear-gradient(135deg,rgba(255,255,255,.85),rgba(220,248,245,.6));
-    box-shadow:0 35px 80px rgba(13,52,76,.15);
+    position:relative;
     display:grid;
     place-items:center;
-    position:relative;
+    background:
+        radial-gradient(circle,#fff 0 35%,#e8faf7 36% 58%,transparent 59%),
+        linear-gradient(135deg,#fff,#dcf8f5);
+    border:1px solid #cce9e5;
+    box-shadow:0 30px 70px rgba(13,52,76,.15);
 }
 
 .orbit-ring{
     position:absolute;
-    inset:35px;
+    inset:30px;
     border:1px dashed rgba(8,127,121,.35);
     border-radius:50%;
-    animation:spin 25s linear infinite;
+    animation:spin 20s linear infinite;
 }
 
 .orbit-ring.two{
-    inset:75px;
+    inset:70px;
     animation-direction:reverse;
-    animation-duration:18s;
+    animation-duration:14s;
 }
 
 .medical-cross{
-    width:115px;
-    height:115px;
-    border-radius:30px;
-    background:linear-gradient(135deg,var(--primary),var(--accent));
-    box-shadow:0 25px 50px rgba(8,127,121,.25);
+    width:110px;
+    height:110px;
+    border-radius:28px;
     display:grid;
     place-items:center;
-    color:#fff;
+    background:linear-gradient(135deg,var(--primary),var(--accent));
+    color:white;
     font-size:65px;
-    position:relative;
     z-index:2;
+    box-shadow:0 20px 45px rgba(8,127,121,.25);
 }
 
 .floating-card{
     position:absolute;
-    padding:15px 18px;
-    border-radius:15px;
-    background:rgba(255,255,255,.9);
-    box-shadow:var(--shadow-md);
-    border:1px solid rgba(255,255,255,.8);
-    display:flex;
-    align-items:center;
-    gap:12px;
+    padding:14px 16px;
+    background:white;
+    border-radius:14px;
+    box-shadow:var(--shadow);
     font-size:13px;
-    font-weight:800;
-    color:var(--secondary);
+    font-weight:bold;
 }
 
 .floating-card.one{
-    top:50px;
+    top:45px;
     right:-10px;
 }
 
 .floating-card.two{
-    bottom:70px;
-    left:-20px;
+    bottom:55px;
+    left:-15px;
 }
 
-.floating-icon{
-    width:38px;
-    height:38px;
-    border-radius:10px;
-    display:grid;
-    place-items:center;
-    background:#e8faf7;
-    color:var(--primary);
+@keyframes spin{
+    from{transform:rotate(0)}
+    to{transform:rotate(360deg)}
 }
 
 /* TRUST */
 
 .trust-strip{
+    margin-top:-35px;
     position:relative;
     z-index:5;
-    margin-top:-35px;
 }
 
 .trust-inner{
-    max-width:1100px;
+    max-width:1050px;
     margin:auto;
-    padding:0 24px;
+    padding:0 20px;
 }
 
 .trust-box{
-    background:var(--white);
+    background:white;
     border:1px solid var(--border);
     border-radius:18px;
-    box-shadow:var(--shadow-md);
+    box-shadow:var(--shadow);
     display:grid;
     grid-template-columns:repeat(4,1fr);
 }
 
 .trust-item{
-    padding:25px 20px;
+    padding:23px 15px;
     text-align:center;
     border-right:1px solid var(--border);
 }
@@ -432,96 +354,90 @@ body.dark header{
 
 .trust-item strong{
     display:block;
-    font-size:27px;
     color:var(--primary);
+    font-size:24px;
 }
 
 .trust-item span{
     color:var(--muted);
-    font-size:13px;
+    font-size:12px;
 }
 
 /* GENERAL */
 
 section{
-    padding:100px 24px;
+    padding:90px 20px;
 }
 
 .container{
-    max-width:1280px;
+    max-width:1200px;
     margin:auto;
 }
 
 .section-heading{
     max-width:750px;
-    margin:0 auto 50px;
+    margin:0 auto 45px;
     text-align:center;
 }
 
 .eyebrow{
-    display:inline-block;
     color:var(--primary);
     text-transform:uppercase;
     letter-spacing:2px;
     font-size:12px;
-    font-weight:900;
-    margin-bottom:10px;
+    font-weight:bold;
 }
 
 .section-title{
-    color:var(--secondary);
-    font-size:clamp(31px,4vw,45px);
+    font-size:42px;
     line-height:1.15;
-    margin-bottom:14px;
+    color:var(--dark);
+    margin:8px 0 12px;
 }
 
 .section-description{
     color:var(--muted);
-    font-size:16px;
 }
 
 /* DIVISIONS */
 
 .divisions-section{
-    background:var(--white);
+    background:white;
 }
 
 .divisions-grid{
     display:grid;
     grid-template-columns:repeat(6,1fr);
-    gap:18px;
+    gap:16px;
 }
 
 .division-card{
-    padding:30px 18px;
-    border:1px solid var(--border);
-    border-radius:17px;
-    background:var(--white);
+    padding:28px 15px;
     text-align:center;
-    transition:.3s ease;
+    border:1px solid var(--border);
+    border-radius:16px;
+    background:white;
+    transition:.3s;
 }
 
 .division-card:hover{
-    transform:translateY(-8px);
-    box-shadow:var(--shadow-md);
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
 }
 
 .division-icon{
-    width:62px;
-    height:62px;
-    margin:0 auto 17px;
+    width:60px;
+    height:60px;
+    margin:0 auto 15px;
     display:grid;
     place-items:center;
-    border-radius:17px;
     background:#eaf9f7;
-    color:var(--primary);
-    font-size:26px;
+    border-radius:16px;
+    font-size:25px;
 }
 
 .division-card h3{
-    font-size:17px;
-    color:var(--text);
-    margin-bottom:5px;
+    font-size:16px;
 }
 
 .division-card p{
@@ -536,10 +452,10 @@ section{
 }
 
 .product-toolbar{
-    max-width:1000px;
-    margin:0 auto 35px;
+    max-width:950px;
+    margin:0 auto 30px;
     display:grid;
-    grid-template-columns:1fr auto;
+    grid-template-columns:1fr 190px;
     gap:12px;
 }
 
@@ -549,41 +465,34 @@ section{
 
 .search-wrap span{
     position:absolute;
-    left:17px;
+    left:16px;
     top:50%;
     transform:translateY(-50%);
-    color:var(--muted);
 }
 
 .search{
     width:100%;
-    min-height:54px;
-    padding:14px 18px 14px 48px;
+    height:52px;
+    padding:10px 15px 10px 45px;
     border:1px solid var(--border);
-    border-radius:12px;
-    background:var(--white);
-    color:var(--text);
+    border-radius:10px;
     outline:none;
 }
 
 .category-filter{
-    min-width:190px;
-    padding:0 15px;
     border:1px solid var(--border);
-    border-radius:12px;
-    background:var(--white);
-    color:var(--text);
-    outline:none;
+    border-radius:10px;
+    padding:0 12px;
+    background:white;
 }
 
 .product-meta{
-    max-width:1000px;
-    margin:0 auto 25px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+    max-width:950px;
+    margin:0 auto 20px;
     color:var(--muted);
     font-size:13px;
+    display:flex;
+    justify-content:space-between;
 }
 
 .product-meta strong{
@@ -597,62 +506,58 @@ section{
 }
 
 .product-category{
-    background:var(--white);
+    background:white;
     border:1px solid var(--border);
-    border-radius:18px;
-    padding:25px;
-    box-shadow:var(--shadow-sm);
+    border-radius:17px;
+    padding:24px;
+    box-shadow:var(--shadow);
 }
 
 .category-header{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:15px;
-    margin-bottom:18px;
-    padding-bottom:14px;
+    align-items:center;
     border-bottom:1px solid var(--border);
+    padding-bottom:13px;
+    margin-bottom:15px;
 }
 
 .category-header h3{
     color:var(--primary);
-    font-size:20px;
 }
 
 .category-count{
-    min-width:34px;
-    height:28px;
-    padding:0 9px;
+    min-width:32px;
+    height:27px;
     display:grid;
     place-items:center;
+    border-radius:50px;
     background:#e9f8f6;
     color:var(--primary);
-    border-radius:100px;
+    font-weight:bold;
     font-size:12px;
-    font-weight:900;
 }
 
 .product-category ol{
-    margin:0;
-    padding-left:27px;
+    padding-left:25px;
     columns:2;
-    column-gap:35px;
 }
 
 .product-category li{
-    break-inside:avoid;
-    padding:5px 3px;
-    color:var(--text);
+    padding:5px;
     font-size:13px;
+}
+
+.product-category li::marker{
+    color:var(--primary);
 }
 
 .no-results{
     display:none;
-    padding:50px 20px;
     text-align:center;
-    background:var(--white);
-    border:1px solid var(--border);
-    border-radius:18px;
+    padding:40px;
+    background:white;
+    border-radius:15px;
     color:var(--muted);
 }
 
@@ -663,39 +568,38 @@ section{
 /* ABOUT */
 
 .about-section{
-    background:var(--white);
+    background:white;
 }
 
 .about-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:55px;
+    gap:50px;
     align-items:center;
 }
 
 .about-content h3{
+    color:var(--dark);
     font-size:30px;
-    color:var(--secondary);
-    margin-bottom:18px;
+    margin:10px 0 15px;
 }
 
 .about-content p{
     color:var(--muted);
-    margin-bottom:16px;
+    margin-bottom:15px;
 }
 
 .about-points{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:13px;
-    margin-top:28px;
+    gap:12px;
+    margin-top:25px;
 }
 
 .about-point{
-    padding:17px;
+    padding:16px;
     background:#f2faf9;
-    border-radius:13px;
-    border:1px solid rgba(8,127,121,.1);
+    border-radius:12px;
 }
 
 .about-point strong{
@@ -709,27 +613,19 @@ section{
 }
 
 .about-visual{
-    min-height:430px;
-    padding:30px;
-    border-radius:25px;
+    min-height:400px;
+    border-radius:24px;
     background:linear-gradient(145deg,#073d50,#0b817b);
-    position:relative;
-    overflow:hidden;
-    box-shadow:var(--shadow-lg);
-    color:white;
+    padding:30px;
     display:flex;
     align-items:flex-end;
 }
 
 .about-panel{
-    position:relative;
-    z-index:2;
-    max-width:470px;
     padding:25px;
-    border-radius:18px;
-    background:rgba(255,255,255,.1);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.15);
+    border-radius:17px;
+    background:rgba(255,255,255,.12);
+    color:white;
 }
 
 .about-panel h4{
@@ -739,7 +635,6 @@ section{
 
 .about-panel p{
     color:#d8eff1;
-    font-size:14px;
 }
 
 /* VALUES */
@@ -751,34 +646,26 @@ section{
 .values-grid{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:20px;
 }
 
 .value-card{
-    padding:30px;
-    background:var(--white);
+    background:white;
     border:1px solid var(--border);
-    border-radius:18px;
-    transition:.3s ease;
-}
-
-.value-card:hover{
-    transform:translateY(-7px);
-    box-shadow:var(--shadow-md);
+    border-radius:17px;
+    padding:30px;
 }
 
 .value-number{
     color:var(--primary);
-    font-size:12px;
-    font-weight:900;
+    font-weight:bold;
     letter-spacing:2px;
-    margin-bottom:20px;
+    margin-bottom:15px;
 }
 
 .value-card h3{
-    color:var(--text);
-    margin-bottom:9px;
     font-size:21px;
+    margin-bottom:8px;
 }
 
 .value-card p{
@@ -786,32 +673,28 @@ section{
     font-size:14px;
 }
 
-/* CTA */
+/* CONTACT */
 
 .cta-section{
-    padding-top:75px;
-    padding-bottom:75px;
+    padding:70px 20px;
 }
 
 .cta-box{
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
-    padding:55px;
-    border-radius:25px;
-    background:
-        radial-gradient(circle at 90% 10%,rgba(25,184,170,.22),transparent 25%),
-        linear-gradient(135deg,#083e51,#087f79);
+    padding:50px;
+    border-radius:24px;
+    background:linear-gradient(135deg,#083e51,#087f79);
     color:white;
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:35px;
-    box-shadow:var(--shadow-lg);
+    align-items:center;
+    gap:30px;
 }
 
 .cta-box h2{
-    font-size:clamp(27px,4vw,40px);
-    line-height:1.15;
+    font-size:38px;
+    line-height:1.2;
     margin-bottom:10px;
 }
 
@@ -820,14 +703,16 @@ section{
     max-width:650px;
 }
 
+/* FOOTER */
+
 .footer{
     background:#09283a;
     color:#d9edf2;
-    padding:50px 24px 25px;
+    padding:50px 20px 25px;
 }
 
 .footer-grid{
-    max-width:1200px;
+    max-width:1150px;
     margin:auto;
     display:grid;
     grid-template-columns:2fr 1fr 1fr;
@@ -839,47 +724,41 @@ section{
     margin-bottom:15px;
 }
 
-.footer p{
+.footer p,
+.footer a{
     color:#a9c8cf;
     font-size:14px;
 }
 
 .footer a{
     display:block;
-    text-decoration:none;
-    color:#c9e2e7;
-    margin-bottom:8px;
+    margin-bottom:7px;
 }
 
 .footer-bottom{
-    max-width:1200px;
-    margin:35px auto 0;
+    max-width:1150px;
+    margin:30px auto 0;
     padding-top:20px;
     border-top:1px solid rgba(255,255,255,.12);
     text-align:center;
-    color:#91b1b8;
     font-size:12px;
-}
-
-@keyframes spin{
-    from{transform:rotate(0deg);}
-    to{transform:rotate(360deg);}
+    color:#91b1b8;
 }
 
 /* MOBILE */
 
 @media(max-width:1000px){
+
     .nav-links{
         display:none;
         position:absolute;
-        top:100%;
+        top:75px;
         left:0;
         right:0;
-        background:var(--white);
-        padding:15px 24px;
+        padding:15px 20px;
+        background:white;
         flex-direction:column;
-        align-items:stretch;
-        box-shadow:var(--shadow-md);
+        box-shadow:var(--shadow);
     }
 
     .nav-links.open{
@@ -887,15 +766,11 @@ section{
     }
 
     .menu-btn{
-        display:grid;
+        display:block;
     }
 
     .hero-grid{
         grid-template-columns:1fr;
-        gap:30px;
-    }
-
-    .hero-content{
         text-align:center;
     }
 
@@ -914,52 +789,30 @@ section{
 }
 
 @media(max-width:700px){
-    .top-bar-inner{
-        justify-content:center;
-    }
 
     .top-right{
         display:none;
     }
 
-    .navbar{
-        padding:10px 16px;
-    }
-
-    .brand{
-        min-width:auto;
-    }
-
-    .header-actions .icon-btn:not(.menu-btn){
-        display:none;
-    }
-
-    .hero{
-        min-height:auto;
+    .top-bar-inner{
+        justify-content:center;
     }
 
     .hero-grid{
-        padding:70px 18px;
+        padding:60px 15px;
     }
 
     .hero h1{
-        font-size:43px;
-    }
-
-    .hero-visual{
-        min-height:350px;
+        font-size:44px;
     }
 
     .medical-orbit{
         width:300px;
+        height:300px;
     }
 
-    .floating-card.one{
-        right:0;
-    }
-
-    .floating-card.two{
-        left:0;
+    .floating-card{
+        font-size:11px;
     }
 
     .trust-box{
@@ -975,7 +828,11 @@ section{
     }
 
     section{
-        padding:70px 18px;
+        padding:65px 15px;
+    }
+
+    .section-title{
+        font-size:34px;
     }
 
     .divisions-grid{
@@ -1012,6 +869,10 @@ section{
         align-items:flex-start;
     }
 
+    .cta-box h2{
+        font-size:30px;
+    }
+
     .footer-grid{
         grid-template-columns:1fr;
     }
@@ -1024,25 +885,23 @@ section{
 <!-- TOP BAR -->
 <div class="top-bar">
     <div class="top-bar-inner">
-        <div class="top-left">
-            <span>Healthcare • Quality • Trust</span>
-        </div>
-
+        <div>Healthcare • Quality • Trust</div>
         <div class="top-right">
-            <a href="mailto:info@ziyanalifesciences.com">info@ziyanalifesciences.com</a>
+            <a href="mailto:info@ziyanalifesciences.com">
+                info@ziyanalifesciences.com
+            </a>
             <span>Pharmaceutical & Healthcare Products</span>
         </div>
     </div>
 </div>
 
 <!-- HEADER -->
-<header id="header">
+<header>
     <nav class="navbar">
 
         <a href="#home" class="brand">
             <div class="logo-fallback">
                 <div class="logo-mark">Z</div>
-
                 <div class="logo-text">
                     <strong>Ziyana Lifesciences</strong>
                     <span>Private Limited</span>
@@ -1051,7 +910,7 @@ section{
         </a>
 
         <div class="nav-links" id="navLinks">
-            <a href="#home" class="active">Home</a>
+            <a href="#home">Home</a>
             <a href="#divisions">Divisions</a>
             <a href="#products">Products</a>
             <a href="#about">About</a>
@@ -1060,11 +919,8 @@ section{
         </div>
 
         <div class="header-actions">
-            <button class="icon-btn" id="themeBtn" title="Dark Mode">🌙</button>
-
-            <button class="icon-btn menu-btn" id="menuBtn" title="Menu">
-                ☰
-            </button>
+            <button class="icon-btn" id="themeBtn">🌙</button>
+            <button class="icon-btn menu-btn" id="menuBtn">☰</button>
         </div>
 
     </nav>
@@ -1075,7 +931,7 @@ section{
 
     <div class="hero-grid">
 
-        <div class="hero-content">
+        <div>
 
             <div class="hero-badge">
                 <span class="status-dot"></span>
@@ -1112,9 +968,572 @@ section{
                 <div class="orbit-ring"></div>
                 <div class="orbit-ring two"></div>
 
-                <div class="medical-cross">
-                    +
-                </div>
+                <div class="medical-cross">+</div>
 
                 <div class="floating-card one">
-                    <div class="floating-ico
+                    ✓ Quality Focused
+                </div>
+
+                <div class="floating-card two">
+                    ⚕ Healthcare First
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- TRUST -->
+<div class="trust-strip">
+
+    <div class="trust-inner">
+
+        <div class="trust-box">
+
+            <div class="trust-item">
+                <strong>100+</strong>
+                <span>Healthcare Products</span>
+            </div>
+
+            <div class="trust-item">
+                <strong>6+</strong>
+                <span>Product Divisions</span>
+            </div>
+
+            <div class="trust-item">
+                <strong>Quality</strong>
+                <span>Focused Approach</span>
+            </div>
+
+            <div class="trust-item">
+                <strong>Trust</strong>
+                <span>Built for Healthcare</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- DIVISIONS -->
+<section class="divisions-section" id="divisions">
+
+    <div class="container">
+
+        <div class="section-heading">
+            <span class="eyebrow">Our Divisions</span>
+
+            <h2 class="section-title">
+                Healthcare Categories
+            </h2>
+
+            <p class="section-description">
+                Our portfolio covers multiple healthcare and pharmaceutical
+                categories.
+            </p>
+        </div>
+
+        <div class="divisions-grid">
+
+            <div class="division-card">
+                <div class="division-icon">💊</div>
+                <h3>Tablets</h3>
+                <p>Pharmaceutical formulations</p>
+            </div>
+
+            <div class="division-card">
+                <div class="division-icon">💉</div>
+                <h3>Injectables</h3>
+                <p>Healthcare products</p>
+            </div>
+
+            <div class="division-card">
+                <div class="division-icon">🧴</div>
+                <h3>Syrups</h3>
+                <p>Liquid formulations</p>
+            </div>
+
+            <div class="division-card">
+                <div class="division-icon">💊</div>
+                <h3>Capsules</h3>
+                <p>Capsule products</p>
+            </div>
+
+            <div class="division-card">
+                <div class="division-icon">🧪</div>
+                <h3>Dry Syrups</h3>
+                <p>Healthcare formulations</p>
+            </div>
+
+            <div class="division-card">
+                <div class="division-icon">⚕</div>
+                <h3>Healthcare</h3>
+                <p>Healthcare portfolio</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="products">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">Product Portfolio</span>
+
+            <h2 class="section-title">
+                Our Products
+            </h2>
+
+            <p class="section-description">
+                Search and explore our pharmaceutical product categories.
+            </p>
+
+        </div>
+
+        <div class="product-toolbar">
+
+            <div class="search-wrap">
+                <span>🔍</span>
+
+                <input
+                    type="text"
+                    class="search"
+                    id="productSearch"
+                    placeholder="Search products..."
+                >
+            </div>
+
+            <select class="category-filter" id="categoryFilter">
+
+                <option value="all">All Categories</option>
+                <option value="tablets">Tablets</option>
+                <option value="capsules">Capsules</option>
+                <option value="syrups">Syrups</option>
+                <option value="injectables">Injectables</option>
+
+            </select>
+
+        </div>
+
+        <div class="product-meta">
+            <span>Browse our product portfolio</span>
+            <strong id="productCount">12 Products</strong>
+        </div>
+
+        <div class="product-list" id="productList">
+
+            <div class="product-category" data-category="tablets">
+
+                <div class="category-header">
+                    <h3>Tablets</h3>
+                    <span class="category-count">4</span>
+                </div>
+
+                <ol>
+                    <li>Paracetamol Tablets</li>
+                    <li>Azithromycin Tablets</li>
+                    <li>Levocetirizine Tablets</li>
+                    <li>Pantoprazole Tablets</li>
+                </ol>
+
+            </div>
+
+            <div class="product-category" data-category="capsules">
+
+                <div class="category-header">
+                    <h3>Capsules</h3>
+                    <span class="category-count">3</span>
+                </div>
+
+                <ol>
+                    <li>Omeprazole Capsules</li>
+                    <li>Amoxicillin Capsules</li>
+                    <li>Vitamin Capsules</li>
+                </ol>
+
+            </div>
+
+            <div class="product-category" data-category="syrups">
+
+                <div class="category-header">
+                    <h3>Syrups</h3>
+                    <span class="category-count">3</span>
+                </div>
+
+                <ol>
+                    <li>Cough Syrup</li>
+                    <li>Multivitamin Syrup</li>
+                    <li>Digestive Syrup</li>
+                </ol>
+
+            </div>
+
+            <div class="product-category" data-category="injectables">
+
+                <div class="category-header">
+                    <h3>Injectables</h3>
+                    <span class="category-count">2</span>
+                </div>
+
+                <ol>
+                    <li>Vitamin Injection</li>
+                    <li>Antibiotic Injection</li>
+                </ol>
+
+            </div>
+
+        </div>
+
+        <div class="no-results" id="noResults">
+            No products found.
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+<section class="about-section" id="about">
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-content">
+
+                <span class="eyebrow">About Us</span>
+
+                <h3>
+                    Advancing Healthcare Through Quality
+                </h3>
+
+                <p>
+                    Ziyana Lifesciences Private Limited is a healthcare and
+                    pharmaceutical company focused on building a reliable
+                    portfolio of pharmaceutical and healthcare products.
+                </p>
+
+                <p>
+                    Our focus is on quality, consistency, responsible
+                    healthcare practices and long-term relationships.
+                </p>
+
+                <div class="about-points">
+
+                    <div class="about-point">
+                        <strong>Quality</strong>
+                        <span>Consistent product standards.</span>
+                    </div>
+
+                    <div class="about-point">
+                        <strong>Innovation</strong>
+                        <span>Improving healthcare solutions.</span>
+                    </div>
+
+                    <div class="about-point">
+                        <strong>Trust</strong>
+                        <span>Building dependable relationships.</span>
+                    </div>
+
+                    <div class="about-point">
+                        <strong>Responsibility</strong>
+                        <span>Responsible healthcare approach.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="about-visual">
+
+                <div class="about-panel">
+
+                    <h4>Healthcare With Purpose</h4>
+
+                    <p>
+                        Our vision is to contribute to a healthier future
+                        through dependable pharmaceutical and healthcare
+                        products.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- VALUES -->
+<section class="values-section" id="values">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">Our Values</span>
+
+            <h2 class="section-title">
+                What Drives Us
+            </h2>
+
+            <p class="section-description">
+                Quality, responsibility and trust guide our work.
+            </p>
+
+        </div>
+
+        <div class="values-grid">
+
+            <div class="value-card">
+
+                <div class="value-number">01</div>
+
+                <h3>Quality First</h3>
+
+                <p>
+                    Quality remains at the centre of our healthcare products
+                    and business decisions.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-number">02</div>
+
+                <h3>Patient Focus</h3>
+
+                <p>
+                    We aim to support healthcare needs through dependable
+                    pharmaceutical solutions.
+                </p>
+
+            </div>
+
+            <div class="value-card">
+
+                <div class="value-number">03</div>
+
+                <h3>Long-Term Trust</h3>
+
+                <p>
+                    We value transparent relationships and long-term
+                    partnerships.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CONTACT -->
+<section class="cta-section" id="contact">
+
+    <div class="cta-box">
+
+        <div>
+
+            <h2>
+                Let's Build a Healthier Future Together.
+            </h2>
+
+            <p>
+                Connect with Ziyana Lifesciences Private Limited for
+                pharmaceutical and healthcare product enquiries.
+            </p>
+
+        </div>
+
+        <a
+            href="mailto:info@ziyanalifesciences.com"
+            class="btn btn-primary"
+        >
+            Contact Us →
+        </a>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-grid">
+
+        <div>
+
+            <h3>Ziyana Lifesciences</h3>
+
+            <p>
+                Ziyana Lifesciences Private Limited is focused on
+                pharmaceutical and healthcare products with an emphasis on
+                quality, trust and responsible healthcare.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Quick Links</h3>
+
+            <a href="#home">Home</a>
+            <a href="#divisions">Divisions</a>
+            <a href="#products">Products</a>
+            <a href="#about">About</a>
+            <a href="#values">Values</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Contact</h3>
+
+            <a href="mailto:info@ziyanalifesciences.com">
+                info@ziyanalifesciences.com
+            </a>
+
+            <p>
+                Ziyana Lifesciences Private Limited
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        © <span id="year"></span>
+        Ziyana Lifesciences Private Limited.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+<script>
+
+    /* MOBILE MENU */
+
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", function(){
+    navLinks.classList.toggle("open");
+});
+
+document.querySelectorAll(".nav-links a").forEach(function(link){
+
+    link.addEventListener("click", function(){
+        navLinks.classList.remove("open");
+    });
+
+});
+
+
+/* DARK MODE */
+
+const themeBtn = document.getElementById("themeBtn");
+
+themeBtn.addEventListener("click", function(){
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        themeBtn.textContent = "☀️";
+    }else{
+        themeBtn.textContent = "🌙";
+    }
+
+});
+
+
+/* PRODUCT FILTER */
+
+const searchInput = document.getElementById("productSearch");
+const categoryFilter = document.getElementById("categoryFilter");
+const productCards = document.querySelectorAll(".product-category");
+const noResults = document.getElementById("noResults");
+const productCount = document.getElementById("productCount");
+
+function filterProducts(){
+
+    const searchValue =
+        searchInput.value.toLowerCase().trim();
+
+    const selectedCategory =
+        categoryFilter.value;
+
+    let total = 0;
+
+    productCards.forEach(function(card){
+
+        const category =
+            card.getAttribute("data-category");
+
+        const text =
+            card.textContent.toLowerCase();
+
+        const categoryMatch =
+            selectedCategory === "all" ||
+            category === selectedCategory;
+
+        const searchMatch =
+            searchValue === "" ||
+            text.includes(searchValue);
+
+        if(categoryMatch && searchMatch){
+
+            card.style.display = "";
+
+            total += card.querySelectorAll("li").length;
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+    productCount.textContent =
+        total + " Products";
+
+    if(total === 0){
+        noResults.classList.add("show");
+    }else{
+        noResults.classList.remove("show");
+    }
+
+}
+
+searchInput.addEventListener("input",filterProducts);
+
+categoryFilter.addEventListener("change",filterProducts);
+
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
