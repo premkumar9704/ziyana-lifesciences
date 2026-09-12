@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +7,6 @@
     <title>Ziyana Lifesciences Pvt. Ltd.</title>
 
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -23,22 +21,16 @@
             line-height: 1.6;
         }
 
-        /* ================= HEADER ================= */
-
+        /* HEADER */
         header {
-            width: 100%;
-            background: white;
-
+            background: #ffffff;
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             padding: 10px 6%;
-
             position: sticky;
             top: 0;
             z-index: 1000;
-
             box-shadow: 0 2px 12px rgba(0,0,0,0.10);
         }
 
@@ -49,7 +41,7 @@
         }
 
         .brand img {
-            width: 95px;
+            width: 100px;
             height: 65px;
             object-fit: contain;
             display: block;
@@ -66,47 +58,40 @@
             color: #555;
             font-size: 11px;
             font-weight: bold;
-            margin-top: 3px;
         }
-
-        /* ================= NAVIGATION ================= */
 
         nav {
             display: flex;
-            align-items: center;
             gap: 22px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         nav a {
             text-decoration: none;
             color: #222;
             font-weight: 600;
-            transition: 0.3s;
         }
 
         nav a:hover {
             color: #0757c9;
         }
 
-        /* ================= HERO ================= */
-
+        /* HERO */
         .hero {
-            min-height: 520px;
-
+            min-height: 500px;
             display: flex;
             align-items: center;
             justify-content: center;
-
             text-align: center;
-
-            padding: 80px 20px;
+            padding: 70px 20px;
 
             background:
                 linear-gradient(
                     rgba(0,64,140,0.88),
                     rgba(0,64,140,0.88)
                 ),
-                url("last.jpg");
+                url("images/last.jpg");
 
             background-size: cover;
             background-position: center;
@@ -118,60 +103,55 @@
         }
 
         .hero h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
+            font-size: 46px;
+            margin-bottom: 18px;
         }
 
         .hero p {
             font-size: 20px;
-            margin-bottom: 30px;
+            margin-bottom: 28px;
+        }
+
+        .btn,
+        .card-btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .btn {
-            display: inline-block;
-
-            padding: 13px 28px;
-
             background: white;
             color: #0757c9;
-
-            text-decoration: none;
-
-            border-radius: 6px;
-
-            font-weight: bold;
-
-            transition: 0.3s;
         }
 
-        .btn:hover {
-            background: #eaf2ff;
-            transform: translateY(-2px);
+        .card-btn {
+            background: #0757c9;
+            color: white;
         }
 
-        /* ================= GENERAL SECTION ================= */
-
+        /* SECTIONS */
         section {
-            padding: 70px 7%;
+            padding: 65px 7%;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 45px;
+            margin-bottom: 40px;
         }
 
         .section-title h2 {
             font-size: 34px;
             color: #0757c9;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .section-title p {
             color: #666;
         }
 
-        /* ================= DIVISIONS ================= */
-
+        /* DIVISIONS */
         .division-container {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -180,30 +160,16 @@
 
         .division-card {
             background: white;
-
             padding: 30px;
-
             border-radius: 12px;
-
             text-align: center;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.08);
-
-            transition: 0.3s;
-        }
-
-        .division-card:hover {
-            transform: translateY(-7px);
-
-            box-shadow:
-                0 8px 25px rgba(0,0,0,0.13);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .division-card h3 {
             color: #0757c9;
             font-size: 24px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .division-card p {
@@ -211,28 +177,7 @@
             margin-bottom: 20px;
         }
 
-        .card-btn {
-            display: inline-block;
-
-            background: #0757c9;
-
-            color: white;
-
-            text-decoration: none;
-
-            padding: 10px 20px;
-
-            border-radius: 5px;
-
-            font-weight: bold;
-        }
-
-        .card-btn:hover {
-            background: #003d91;
-        }
-
-        /* ================= PRODUCTS ================= */
-
+        /* PRODUCTS */
         #products {
             background: #f5f9ff;
         }
@@ -244,66 +189,36 @@
 
         .product-category {
             background: white;
-
-            margin-bottom: 30px;
-
-            padding: 30px;
-
+            padding: 28px;
+            margin-bottom: 28px;
             border-radius: 12px;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
 
         .product-category h3 {
             color: #0757c9;
-
-            font-size: 24px;
-
-            margin-bottom: 20px;
-
-            padding-bottom: 10px;
-
-            border-bottom:
-                2px solid #e5efff;
+            font-size: 23px;
+            margin-bottom: 18px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid #e5efff;
         }
 
         .product-category ul {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 12px 20px;
-
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px 18px;
             list-style: none;
         }
 
         .product-category li {
             background: #f5f9ff;
-
-            padding: 12px 15px;
-
+            padding: 11px 14px;
+            border-left: 4px solid #0757c9;
             border-radius: 6px;
-
-            color: #333;
-
             font-weight: 600;
-
-            border-left:
-                4px solid #0757c9;
-
-            transition: 0.3s;
         }
 
-        .product-category li:hover {
-            background: #eaf2ff;
-
-            transform: translateX(4px);
-        }
-
-        /* ================= ABOUT ================= */
-
+        /* ABOUT */
         .about {
             background: white;
         }
@@ -315,35 +230,24 @@
         }
 
         .about-container p {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             color: #555;
             font-size: 17px;
         }
 
-        /* ================= VALUES ================= */
-
         .values-container {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 25px;
-
             margin-top: 40px;
         }
 
         .value-card {
             background: white;
-
             padding: 25px;
-
             text-align: center;
-
             border-radius: 10px;
-
-            box-shadow:
-                0 3px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
         .value-card h3 {
@@ -355,39 +259,29 @@
             color: #555;
         }
 
-        /* ================= CONTACT ================= */
-
+        /* CONTACT */
         .contact {
             background: #eef5ff;
         }
 
         .contact-container {
             max-width: 900px;
-
             margin: auto;
-
             display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
+            grid-template-columns: repeat(2, 1fr);
             gap: 25px;
         }
 
         .contact-card {
             background: white;
-
             padding: 25px;
-
             border-radius: 10px;
-
-            box-shadow:
-                0 3px 12px rgba(0,0,0,0.08);
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
         .contact-card h3 {
             color: #0757c9;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .contact-card p {
@@ -399,44 +293,24 @@
             text-decoration: none;
         }
 
-        .contact-card a:hover {
-            text-decoration: underline;
-        }
-
-        /* ================= FOOTER ================= */
-
+        /* FOOTER */
         footer {
             background: #063b88;
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 24px 15px;
         }
 
-        footer p {
-            margin: 5px 0;
-        }
-
-        /* ================= TABLET ================= */
-
+        /* MOBILE */
         @media (max-width: 900px) {
 
             header {
                 flex-direction: column;
                 gap: 12px;
-                padding: 15px;
             }
 
-            nav {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 15px;
-            }
-
-            .hero h2 {
-                font-size: 38px;
-            }
-
-            .division-container {
+            .division-container,
+            .values-container {
                 grid-template-columns: 1fr;
             }
 
@@ -444,30 +318,20 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .values-container {
-                grid-template-columns: 1fr;
-            }
-
             .contact-container {
                 grid-template-columns: 1fr;
             }
         }
 
-        /* ================= MOBILE ================= */
-
         @media (max-width: 500px) {
 
             .brand img {
-                width: 70px;
+                width: 80px;
                 height: 55px;
             }
 
             .brand h1 {
                 font-size: 20px;
-            }
-
-            .brand span {
-                font-size: 9px;
             }
 
             nav {
@@ -479,8 +343,7 @@
             }
 
             .hero {
-                min-height: 430px;
-                padding: 50px 20px;
+                min-height: 420px;
             }
 
             .hero h2 {
@@ -507,376 +370,465 @@
                 grid-template-columns: 1fr;
             }
         }
-
     </style>
-
 </head>
-
 
 <body>
 
+<!-- HEADER -->
+<header>
 
-    <!-- ================= HEADER ================= -->
+    <div class="brand">
 
-    <header>
+        <!-- IMPORTANT: logo file must be images/last.jpg -->
+        <img src="images/last.jpg"
+             alt="Ziyana Lifesciences Logo">
 
-        <div class="brand">
-
-            <img
-                src="last.jpg"
-                alt="Ziyana Lifesciences Logo"
-            >
-
-            <div>
-
-                <h1>
-                    Ziyana Lifesciences
-                </h1>
-
-                <span>
-                    PVT. LTD.
-                </span>
-
-            </div>
-
+        <div>
+            <h1>Ziyana Lifesciences</h1>
+            <span>PVT. LTD.</span>
         </div>
 
+    </div>
 
-        <nav>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#divisions">Divisions</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
 
-            <a href="#home">Home</a>
-
-            <a href="#divisions">Divisions</a>
-
-            <a href="#products">Products</a>
-
-            <a href="#about">About</a>
-
-            <a href="#contact">Contact</a>
-
-        </nav>
-
-    </header>
+</header>
 
 
+<!-- HOME -->
+<section class="hero" id="home">
 
-    <!-- ================= HOME ================= -->
+    <div class="hero-content">
 
-    <section
-        class="hero"
-        id="home"
-    >
+        <h2>Ziyana Lifesciences Pvt. Ltd.</h2>
 
-        <div class="hero-content">
+        <p>
+            Committed to delivering quality healthcare
+            solutions for a healthier tomorrow.
+        </p>
 
-            <h2>
-                Ziyana Lifesciences Pvt. Ltd.
-            </h2>
+        <a href="#products" class="btn">
+            Explore Our Products
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- DIVISIONS -->
+<section id="divisions">
+
+    <div class="section-title">
+
+        <h2>Our Divisions</h2>
+
+        <p>
+            Explore our specialized pharmaceutical divisions.
+        </p>
+
+    </div>
+
+    <div class="division-container">
+
+        <div class="division-card">
+
+            <h3>General Pharma</h3>
 
             <p>
-                Committed to delivering quality healthcare
-                solutions for a healthier tomorrow.
+                Quality pharmaceutical products for
+                general healthcare needs.
             </p>
 
-            <a
-                href="#products"
-                class="btn"
-            >
-                Explore Our Products
+            <a href="gp.html" class="card-btn">
+                View Division
             </a>
 
         </div>
 
-    </section>
 
+        <div class="division-card">
 
-
-    <!-- ================= DIVISIONS ================= -->
-
-    <section id="divisions">
-
-        <div class="section-title">
-
-            <h2>
-                Our Divisions
-            </h2>
+            <h3>Orthopaedic</h3>
 
             <p>
-                Explore our specialized pharmaceutical divisions.
+                Healthcare solutions focused on bone,
+                joint and musculoskeletal care.
             </p>
 
-        </div>
-
-
-        <div class="division-container">
-
-
-            <div class="division-card">
-
-                <h3>
-                    General Pharma
-                </h3>
-
-                <p>
-                    Quality pharmaceutical products designed
-                    to support general healthcare needs.
-                </p>
-
-                <a
-                    href="gp.html"
-                    class="card-btn"
-                >
-                    View Division
-                </a>
-
-            </div>
-
-
-            <div class="division-card">
-
-                <h3>
-                    Orthopaedic
-                </h3>
-
-                <p>
-                    Healthcare solutions focused on bone,
-                    joint and musculoskeletal care.
-                </p>
-
-                <a
-                    href="ortho.html"
-                    class="card-btn"
-                >
-                    View Division
-                </a>
-
-            </div>
-
-
-            <div class="division-card">
-
-                <h3>
-                    Gynaecology
-                </h3>
-
-                <p>
-                    Pharmaceutical solutions supporting
-                    women's healthcare and wellness.
-                </p>
-
-                <a
-                    href="gyn.html"
-                    class="card-btn"
-                >
-                    View Division
-                </a>
-
-            </div>
+            <a href="ortho.html" class="card-btn">
+                View Division
+            </a>
 
         </div>
 
-    </section>
 
+        <div class="division-card">
 
-
-    <!-- =====================================================
-         PRODUCTS
-         PRODUCT NAMES ONLY
-         NO PRICE / NO MRP / NO GST / NO COMPOSITION
-         NO SCHEME
-    ====================================================== -->
-
-    <section id="products">
-
-        <div class="section-title">
-
-            <h2>
-                Our Products
-            </h2>
+            <h3>Gynaecology</h3>
 
             <p>
-                Complete range of Ziyana Lifesciences products.
+                Pharmaceutical solutions supporting
+                women's healthcare and wellness.
             </p>
+
+            <a href="gyn.html" class="card-btn">
+                View Division
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+<section id="products">
+
+    <div class="section-title">
+
+        <h2>Our Products</h2>
+
+        <p>Product names only.</p>
+
+    </div>
+
+    <div class="product-list">
+
+
+        <!-- TABLETS -->
+        <div class="product-category">
+
+            <h3>Tablets</h3>
+
+            <ul>
+
+                <li>AZIRYL-250</li>
+                <li>AZIRYL-500</li>
+                <li>AMLOPIZ-AT</li>
+                <li>BRINK-UP</li>
+                <li>CALZIWAY</li>
+                <li>CALZIWAY-XT</li>
+                <li>CALZIWAY-FAST</li>
+                <li>CALZICORAL-D3</li>
+                <li>CARTISTING-TOTAL</li>
+                <li>DIFROL</li>
+                <li>DIFROL-S</li>
+                <li>DIFROL-SP</li>
+                <li>DIFROL-MR</li>
+                <li>DYDRONOL</li>
+                <li>DOXIPROL-OD</li>
+                <li>DROWAY-DM</li>
+                <li>DROWAY-A</li>
+                <li>DA RYL-GOLD</li>
+                <li>ETOAIX-90</li>
+                <li>ETOAIX-P</li>
+                <li>ETOAIX-MR</li>
+                <li>FEBRYL-40</li>
+                <li>FOLGREAT-PLUS</li>
+                <li>GLYPSTER-M1</li>
+                <li>GLYPSTER-M2</li>
+                <li>FEXODRAL-120</li>
+                <li>KETOPRAZ-10DT</li>
+                <li>MYOVAS-10</li>
+                <li>MBIUS-4</li>
+                <li>MBIUS-8</li>
+                <li>MEBEWAY-C</li>
+                <li>MESAWELL-OD</li>
+                <li>MYOZOLID-600</li>
+                <li>MYOLACT</li>
+                <li>MYOTRIG</li>
+                <li>MELOREST</li>
+                <li>NEPLODOM</li>
+                <li>NULEVOWAY-500</li>
+                <li>NUROPROL-OD</li>
+                <li>NUROPROL-NT</li>
+                <li>NIMOZ-P</li>
+                <li>NIMOZ-COLD</li>
+                <li>NOSIWAY</li>
+                <li>NOSIWAY-COLD</li>
+                <li>NOSIWAY-TOTAL</li>
+                <li>NUTEXID-MF</li>
+                <li>NEURORLX-LC</li>
+                <li>LETIG-2.5</li>
+                <li>OXIZIYA-I</li>
+                <li>OXIZIYA-MAX</li>
+                <li>OXIBION-FORTE</li>
+                <li>PANTOZIYA-40</li>
+                <li>PANTOZIYA-D</li>
+                <li>PHYTONEM-300 ER</li>
+                <li>QVKNAC-A TAB.</li>
+                <li>QVKCAN-150</li>
+                <li>QVKCAN-200</li>
+                <li>QVKJOINT-DM</li>
+                <li>RAYBILAST-M</li>
+                <li>RAFATOS-400</li>
+                <li>SPASOTIL</li>
+                <li>STILHEAL-AP</li>
+                <li>STILMONT-3D</li>
+                <li>STILMONT-FX</li>
+                <li>SOMPRAWIN-40</li>
+                <li>TIVOZ-5</li>
+                <li>TIVOZ-10</li>
+                <li>TIVOZ-M KID</li>
+                <li>TIVOZ-M</li>
+                <li>TILGEST-SR 300</li>
+                <li>TMLOPIZ-40</li>
+                <li>TMLOPIZ-H</li>
+                <li>TMLOPIZ-AM</li>
+                <li>TERSTIX</li>
+                <li>URSOWAY-150</li>
+                <li>URSOWAY-300</li>
+                <li>VYACE-P</li>
+                <li>VYACE-SP</li>
+                <li>VYACE-MR</li>
+                <li>VYACE-TZ</li>
+                <li>VYACE-COLD</li>
+                <li>VYACE-TH4</li>
+                <li>VYACE-TH4 MAX</li>
+                <li>VERCYST-16</li>
+                <li>WAYFIZ-30</li>
+                <li>WAYFIZ-6</li>
+                <li>WAYFER-XT</li>
+                <li>ZYGRA-100</li>
+                <li>ZYTARAX-25</li>
+                <li>ZIYANIL-650</li>
+                <li>ZIYARAB-20</li>
+                <li>ZIYACOF-D</li>
+                <li>ZIYACEF-AZ L.B</li>
+                <li>ZIYACEF-100 DT</li>
+                <li>ZIYACEF-200</li>
+                <li>ZIYACEF-200LB</li>
+                <li>ZIYACEF-O</li>
+                <li>ZIYACEF-CV</li>
+                <li>ZIYAPOD-200</li>
+                <li>ZIYAPOD-O</li>
+                <li>ZIYAPOD-CV</li>
+                <li>ZIYOF-200</li>
+                <li>ZIYOF-OZ</li>
+                <li>ZIYAFER-XT</li>
+                <li>ZIYAFER-Z</li>
+                <li>ZIYACLAV-625</li>
+                <li>ZIYACLAV-625 LB</li>
+                <li>ZIYATIL-500</li>
+                <li>ZIYAVOM-MD</li>
+
+            </ul>
 
         </div>
 
 
-        <div class="product-list">
+        <!-- CAPSULES -->
+        <div class="product-category">
+
+            <h3>Capsules & Softgel Capsules</h3>
+
+            <ul>
+
+                <li>LITROWAY-100</li>
+                <li>LITROWAY-200</li>
+                <li>OXIZIYA</li>
+                <li>OMIPROL-20</li>
+                <li>OMIPROL-D</li>
+                <li>NEURORLX P-75</li>
+                <li>PANTOZIYA-DSR</li>
+                <li>PANTOZIYA-LS</li>
+                <li>SOMPRAWIN-DSR</li>
+                <li>SOMPRAWIN-L</li>
+                <li>ZIYARAB-DSR</li>
+                <li>QVKLAC</li>
+                <li>VYACE-RB</li>
+                <li>WAYFER-Z</li>
+                <li>ZIYMOX-500</li>
+                <li>ZIYARAB-LS</li>
+                <li>ZIYADOX</li>
+                <li>ZYLINCIN-300</li>
+                <li>CALZIWAY-60K</li>
+                <li>CALZIWAY-CT</li>
+                <li>CALZIWAY-K2</li>
+                <li>CALZIWAY-MAX</li>
+                <li>GINOWAY</li>
+                <li>INTIWAY-V3</li>
+                <li>MEGABOOM-E</li>
+                <li>NEURORLX-OD</li>
+                <li>OXIZIYA-9G</li>
+                <li>OXIZIYA-PLEX</li>
+                <li>PRIMO-GREAT</li>
+                <li>LYCO-3D</li>
+                <li>LYCO-3D PLUS</li>
+                <li>TILGEST-200</li>
+                <li>WAY-Q10</li>
+
+            </ul>
+
+        </div>
 
 
-            <!-- ================= TABLETS ================= -->
+        <!-- SYRUPS -->
+        <div class="product-category">
 
-            <div class="product-category">
+            <h3>Syrups</h3>
 
-                <h3>
-                    Tablets
-                </h3>
+            <ul>
 
-                <ul>
+                <li>ABROTEX</li>
+                <li>CALZIWAY</li>
+                <li>CIPTRIN</li>
+                <li>CITRYL</li>
+                <li>CITRYL-MB6</li>
+                <li>CITRYL-UTI</li>
+                <li>DAILYRAFT</li>
+                <li>GASTROWAY</li>
+                <li>MOVILAC</li>
+                <li>MOVILAC-PLUS</li>
+                <li>NUFRUZYME</li>
+                <li>NUFRUZYME-XL</li>
+                <li>LYCO-3D</li>
+                <li>OMEGA-3</li>
+                <li>OXIZIYA</li>
+                <li>OXIZIYA-L</li>
+                <li>OXIBION-L</li>
+                <li>SUCRADYL-O</li>
+                <li>SILYPLEX</li>
+                <li>TIXIDRYL-AD</li>
+                <li>TIXIDRYL-PD</li>
+                <li>TIXIDRYL-LC</li>
+                <li>WAYFER-XT</li>
+                <li>ZIYAFER-XT</li>
+                <li>ZIYACOF-A</li>
+                <li>ZIYACOF-D</li>
+                <li>ZIYACOF-LS</li>
+                <li>ZIYACOF-BR</li>
+                <li>AZIRYL-100</li>
+                <li>AZIRYL-XL 200</li>
+                <li>AZIRYL-200</li>
+                <li>BIGZINC</li>
+                <li>TIXIDRYL-D</li>
+                <li>JUUNIOR WAYFER-XT</li>
+                <li>NOSIWAY</li>
+                <li>NOSIWAY-COLD</li>
+                <li>POLGESIC PLUS</li>
+                <li>SPASOTIL</li>
+                <li>WAYFIZ</li>
+                <li>ZIYACOF-LS JUNIOR</li>
+                <li>RANDUCE</li>
+                <li>ZIYOF-100</li>
+                <li>ZIYOF-M</li>
+                <li>TIVOZ-M</li>
+                <li>ZYTARAX</li>
 
-                    <li>AZIRYL-250</li>
-                    <li>AZIRYL-500</li>
-                    <li>AZIRYL-500</li>
-                    <li>AMLOPIZ-AT</li>
-                    <li>BRINK-UP</li>
-                    <li>CALZIWAY</li>
-                    <li>CALZIWAY-XT</li>
-                    <li>CALZIWAY-FAST</li>
-                    <li>CALZICORAL-D3</li>
-                    <li>CARTISTING-TOTAL</li>
-                    <li>DIFROL</li>
-                    <li>DIFROL-S</li>
-                    <li>DIFROL-SP</li>
-                    <li>DIFROL-MR</li>
-                    <li>DYDRONOL</li>
-                    <li>DOXIPROL-OD</li>
-                    <li>DROWAY-DM</li>
-                    <li>DROWAY-A</li>
-                    <li>DA RYL-GOLD</li>
-                    <li>ETOAIX-90</li>
-                    <li>ETOAIX-P</li>
-                    <li>ETOAIX-MR</li>
-                    <li>FEBRYL-40</li>
-                    <li>FOLGREAT-PLUS</li>
-                    <li>GLYPSTER-M1</li>
-                    <li>GLYPSTER-M2</li>
-                    <li>FEXODRAL-120</li>
-                    <li>KETOPRAZ-10DT</li>
-                    <li>MYOVAS-10</li>
-                    <li>MBIUS-4</li>
-                    <li>MBIUS-8</li>
-                    <li>MEBEWAY-C</li>
-                    <li>MESAWELL-OD</li>
-                    <li>MYOZOLID-600</li>
-                    <li>MYOLACT</li>
-                    <li>MYOTRIG</li>
-                    <li>MELOREST</li>
-                    <li>NEPLODOM</li>
-                    <li>NULEVOWAY-500</li>
-                    <li>NUROPROL-OD</li>
-                    <li>NUROPROL-NT</li>
-                    <li>NIMOZ-P</li>
-                    <li>NIMOZ-COLD</li>
-                    <li>NOSIWAY</li>
-                    <li>NOSIWAY-COLD</li>
-                    <li>NOSIWAY-TOTAL</li>
-                    <li>NUTEXID-MF</li>
-                    <li>NEURORLX-LC</li>
-                    <li>LETIG-2.5</li>
-                    <li>OXIZIYA-I</li>
-                    <li>OXIZIYA-MAX</li>
-                    <li>OXIBION-FORTE</li>
-                    <li>PANTOZIYA-40</li>
-                    <li>PANTOZIYA-D</li>
-                    <li>PHYTONEM-300 ER</li>
-                    <li>QVKNAC-A TAB.</li>
-                    <li>QVKCAN-150</li>
-                    <li>QVKCAN-200</li>
-                    <li>QVKJOINT-DM</li>
-                    <li>RAYBILAST-M</li>
-                    <li>RAFATOS-400</li>
-                    <li>SPASOTIL</li>
-                    <li>STILHEAL-AP</li>
-                    <li>STILMONT-3D</li>
-                    <li>STILMONT-FX</li>
-                    <li>SOMPRAWIN-40</li>
-                    <li>TIVOZ-5</li>
-                    <li>TIVOZ-10</li>
-                    <li>TIVOZ-M KID</li>
-                    <li>TIVOZ-M</li>
-                    <li>TIVOZ-M</li>
-                    <li>TILGEST-SR 300</li>
-                    <li>TMLOPIZ-40</li>
-                    <li>TMLOPIZ-H</li>
-                    <li>TMLOPIZ-AM</li>
-                    <li>TERSTIX</li>
-                    <li>URSOWAY-150</li>
-                    <li>URSOWAY-300</li>
-                    <li>URSOWAY-300</li>
-                    <li>VYACE-P</li>
-                    <li>VYACE-P</li>
-                    <li>VYACE-SP</li>
-                    <li>VYACE-MR</li>
-                    <li>VYACE-TZ</li>
-                    <li>VYACE-COLD</li>
-                    <li>VYACE-TH4</li>
-                    <li>VYACE-TH4 MAX</li>
-                    <li>VERCYST-16</li>
-                    <li>WAYFIZ-30</li>
-                    <li>WAYFIZ-6</li>
-                    <li>WAYFER-XT</li>
-                    <li>ZYGRA-100</li>
-                    <li>ZYTARAX-25</li>
-                    <li>ZIYANIL-650</li>
-                    <li>ZIYARAB-20</li>
-                    <li>ZIYACOF-D</li>
-                    <li>ZIYACEF-AZ L.B</li>
-                    <li>ZIYACEF-100 DT</li>
-                    <li>ZIYACEF-200</li>
-                    <li>ZIYACEF-200LB</li>
-                    <li>ZIYACEF-O</li>
-                    <li>ZIYACEF-CV</li>
-                    <li>ZIYAPOD-200</li>
-                    <li>ZIYAPOD-O</li>
-                    <li>ZIYAPOD-CV</li>
-                    <li>ZIYOF-200</li>
-                    <li>ZIYOF-OZ</li>
-                    <li>ZIYOF-OZ</li>
-                    <li>ZIYAFER-XT</li>
-                    <li>ZIYAFER-Z</li>
-                    <li>ZIYACLAV-625</li>
-                    <li>ZIYACLAV-625</li>
-                    <li>ZIYACLAV-625 LB</li>
-                    <li>ZIYACLAV-625 LB</li>
-                    <li>ZIYATIL-500</li>
-                    <li>ZIYAVOM-MD</li>
+            </ul>
 
-                </ul>
-
-            </div>
+        </div>
 
 
+        <!-- PAEDIATRIC -->
+        <div class="product-category">
 
-            <!-- ================= CAPSULES ================= -->
+            <h3>Paediatric Drops & Dry Syrups</h3>
 
-            <div class="product-category">
+            <ul>
 
-                <h3>
-                    Capsules & Softgel Capsules
-                </h3>
+                <li>ZIYANIL-250</li>
+                <li>ZIYANIL-M DS</li>
+                <li>ZIYANIL-M</li>
+                <li>COLIBIX-DF DROP</li>
+                <li>CALZIWAY-D3</li>
+                <li>NOSIWAY DROP</li>
+                <li>OXIZIYA DROPS</li>
+                <li>ZIYAVOM</li>
+                <li>WAYFER DROPS</li>
+                <li>NUFRUZYME DROPS</li>
+                <li>HEPTOWAY DROP</li>
+                <li>ZIYACOF-LS</li>
+                <li>ZIYACEF-DROP</li>
+                <li>ZIYAPOD-DROP</li>
+                <li>ZIYANIL-DROPS</li>
+                <li>ZIYACLAV</li>
+                <li>ZIYACLAV-DDS</li>
+                <li>ZIYACEF-50 L.B</li>
+                <li>ZIYACEF-O</li>
+                <li>QVKLAC</li>
+                <li>ZIYAPOD-CV</li>
+                <li>ZIYAPOD-100</li>
+                <li>ZIYAPOD-50</li>
 
-                <ul>
+            </ul>
 
-                    <li>LITROWAY-100</li>
-                    <li>LITROWAY-200</li>
-                    <li>LITROWAY-200</li>
-                    <li>OXIZIYA</li>
-                    <li>OMIPROL-20</li>
-                    <li>OMIPROL-20</li>
-                    <li>OMIPROL-D</li>
-                    <li>OMIPROL-D</li>
-                    <li>NEURORLX P-75</li>
-                    <li>PANTOZIYA-DSR</li>
-                    <li>PANTOZIYA-LS</li>
-                    <li>SOMPRAWIN-DSR</li>
-                    <li>SOMPRAWIN-L</li>
-                    <li>ZIYARAB-DSR</li>
-                    <li>QVKLAC</li>
-                    <li>VYACE-RB</li>
-                    <li>WAYFER-Z</li>
-                    <li>ZIYMOX-500</li>
-                    <li>ZIYARAB-LS</li>
-                    <li>ZIYADOX</li>
-                    <li>ZYLINCIN-300</li>
-                    <li>CALZIWAY-60K</li>
-                    <li>CALZIWAY-CT</li>
-                    <li>CALZIWAY-K2</li>
-                    <li>CALZIWAY-MAX</li>
-                    <li>GINOWAY</li>
-                    <li>INTIWAY-V3</li>
-                    <li>MEGABOOM-E</li>
-                    <li>NEURORLX-OD</li>
-                    <li>OXIZIYA-9G</li>
-                    <li>OXIZIYA-PLEX</li>
-                    <li>PRIMO-GREAT</li>
-                    <li>LYCO-3D<
+        </div>
+
+
+        <!-- INJECTABLES -->
+        <div class="product-category">
+
+            <h3>Injectables</h3>
+
+            <ul>
+
+                <li>CEFTIWAY-1000</li>
+                <li>CEFTIWAY-S 1.5</li>
+                <li>CEFTIWAY-T1.125G</li>
+                <li>DIFROL AQ</li>
+                <li>HEPTOWAY</li>
+                <li>JUSMERO</li>
+                <li>NDROFF-50</li>
+                <li>NEURORLX-1500</li>
+                <li>NEURORLX-PLUS</li>
+                <li>PANTOZIYA-40</li>
+                <li>SOMPRAWIN-40</li>
+                <li>TILGEST-500</li>
+                <li>ZIYACLAV-CV</li>
+                <li>ZIYAFER</li>
+                <li>ZIPOTAZ-4.5</li>
+                <li>ZIYAMAK-500</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- POWDER -->
+        <div class="product-category">
+
+            <h3>Powder & Energy Drinks</h3>
+
+            <ul>
+
+                <li>WAYFER-PRO</li>
+                <li>PROZIYANA</li>
+                <li>ZIYANA ORS</li>
+                <li>ZIYASIP</li>
+
+            </ul>
+
+        </div>
+
+
+        <!-- OINTMENTS -->
+        <div class="product-category">
+
+            <h3>Ointments & Gels</h3>
+
+            <ul>
+
+                <li>DIFROL GEL</li>
+                <li>DIFROL-MR GEL</li>
+                <li>MUPRIV</li>
+                <li>MEMONTA-T</li>
+                <li>NEXPODINE-MS</li>
+                <li>VYACE GEL</li>
+
+            </ul>
+
+        </div>
+
+
+        <!--
